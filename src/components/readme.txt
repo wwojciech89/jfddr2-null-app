@@ -1,0 +1,1 @@
+To umieszczamy komponenty, na których pracujemy.
