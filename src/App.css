@@ -11,6 +11,7 @@
 }
 
 .Header {
+  width: 100%npm;
   position: -webkit-sticky;
   position: sticky;
   /* postion: fixed: */
@@ -24,7 +25,6 @@
 }
 
 .TileContainer__p {
-  max-width: 1200px;
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -34,6 +34,8 @@
 }
 
 .TileContainer__div {
+  margin: auto;
+  max-width: 1400px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
