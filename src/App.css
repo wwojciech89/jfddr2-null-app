@@ -6,13 +6,11 @@
 
 .App {
   width: 100vw;
-  height: 80wh;
+
   border-radius: 10px;
 }
 
 .Header {
-  width: 100%npm;
-  position: -webkit-sticky;
   position: sticky;
   /* postion: fixed: */
   top: 0px;
