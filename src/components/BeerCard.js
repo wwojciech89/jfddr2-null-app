@@ -1,20 +1,36 @@
-const BeerCard = () => {
+const BeerCard = ({
+  name,
+  brewery,
+  description,
+  type,
+  alcohol,
+  origin,
+  extract,
+  volume,
+  picture,
+  bitterness,
+  ingredients,
+}) => {
   return (
     <div>
       <div>
-        <h1>nazwa</h1>
-        <h2>producent</h2>
-        <p>informacje</p>
-        <ul>
-          <li>rodzaj piwa</li>
-          <li>alkohol</li>
-          <li>procent</li>
-          <li>ekstrakt</li>
-        </ul>
+        <img alt="picture">{picture}</img>
       </div>
       <div>
-        <img></img>
+        <h1>name{name}</h1>
+        <h2>brewery{brewery}</h2>
+        <p>description{description}</p>
+        <ul>
+          <li>type{type}</li>
+          <li>alcohol{alcohol}</li>
+          <li>origin{origin}</li>
+          <li>extract{extract}</li>
+          <li>volume{volume}</li>
+          <li>bitterness{bitterness}</li>
+          <li>ingredients{ingredients}</li>
+        </ul>
       </div>
     </div>
   );
 };
+export default BeerCard;
