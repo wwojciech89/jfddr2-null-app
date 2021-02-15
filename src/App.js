@@ -2,6 +2,7 @@ import "./App.css";
 import BeerTile from "./components/BeerTile";
 import TileContainer from "./components/TileContainer";
 import Header from "./components/Header";
+import BeerCard from "./components/BeerCard";
 
 const beerDB = [
   { name: "Mocne", type: "Ipa", foto: "http://placekitten.com/100/120" },
@@ -23,6 +24,7 @@ function App() {
           );
         })}
       </TileContainer>
+      <BeerCard />
     </div>
   );
 }
