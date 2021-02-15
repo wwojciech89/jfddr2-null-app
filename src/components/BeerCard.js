@@ -1,22 +1,26 @@
 import React from "react";
 import "./BeerCard.css";
+import "firebase/firestore";
 import firebase from "../Firebase/firebase";
+import db from "../Firebase/firebase";
 
 import { useParams } from "react-router-dom";
 
-function forEachArticle() {
+function renderMappedBeer() {
   firebase
     .firestore()
     .collection("Beers")
-    .orderBy("time", "desc")
     .onSnapshot((Beers) => {
-      console.log(Beers);
-      // articles.forEach((article) => {
-      //   createArticleContent(article);
-      // });
+      Beers.docs.forEach((beer) => {
+        return createArticleContent(beer);
+      });
     });
 }
-forEachArticle();
+renderMappedBeer();
+
+function createArticleContent(beer) {
+  return console.log(beer.data());
+}
 
 const BeerCard = ({ beers }) => {
   const { beerName } = useParams();
