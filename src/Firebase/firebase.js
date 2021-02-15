@@ -11,7 +11,5 @@ const firebaseConfig = {
   appId: "1:406560500620:web:87450c7e032b04e14084a9",
 };
 firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-db.settings({ timestampsInSnapshots: true });
+
 export default firebase;
-export { db };

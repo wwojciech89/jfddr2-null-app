@@ -28,41 +28,16 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <TileContainer>
-        <Switch
-        // location={location}
-        >
-          <Route
-            exact
-            path="/"
-            children={beerDB.map((beer, i) => {
-              return (
-                <Link key={i} to={`/dupa/${beer.name}`}>
-                  <BeerTile
-                    name={beer.name}
-                    type={beer.type}
-                    foto={beer.foto}
-                  />
-                </Link>
-              );
-            })}
-          />
-          {/* <Route
-            path="/dupa/:beerType"
-            children={<BeerCard beers={beerDB} />}
-          /> */}
-          {/* O CO CHO Z USE useParams */}
-          {/* O CO CHO z LOCATION */}
+      <TileContainer />
 
-          <Route path="/dupa/:beerName">
-            <>
-              <HomeButton />
-
-              <BeerCard beers={beerDB} />
-            </>
-          </Route>
-        </Switch>
-      </TileContainer>
+      <Switch>
+        <Route path="/beers/:beerName">
+          <>
+            <HomeButton />
+            <BeerCard beers={beerDB} />
+          </>
+        </Route>
+      </Switch>
     </div>
   );
 }
