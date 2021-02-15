@@ -29,9 +29,8 @@
 .BeerCard .product_name {
   text-align: center;
   margin: 10vh 0 15vh 0;
-  background-color: #2e552a;
+  background-color: #244121;
   color: whitesmoke;
-  -webkit-box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
   border-radius: 30px;
   padding: 0 10% 0 10%;
 }
