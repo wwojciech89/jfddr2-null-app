@@ -1,0 +1,42 @@
+.BeerCard {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100vw;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 10px 10px 10px 10px rgba(223, 223, 223, 0.2);
+}
+.BeerCard div {
+  display: flex;
+  justify-content: space-around;
+  max-width: 300px;
+}
+.BeerCard div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.BeerCard p {
+  font-size: 14px;
+}
+
+.BeerCard li {
+  font-size: 14px;
+  list-style-type: none;
+  padding: 5px;
+}
+.BeerCard table {
+  border-collapse: collapse;
+  width: 300px;
+}
+.BeerCard td {
+  padding-right: 5px;
+  border-bottom: 1px solid rgb(80, 109, 68);
+}
+
+img {
+  background-image: url(https://picsum.photos/id/237/200/300);
+  width: 250px;
+  height: 400px;
+}
