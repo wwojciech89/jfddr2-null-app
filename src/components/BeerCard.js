@@ -1,6 +1,6 @@
 import React from "react";
 import "./BeerCard.css";
-import firebase from "firebase/app";
+import firebase from "../Firebase/firebase";
 
 import { useParams } from "react-router-dom";
 
@@ -9,14 +9,14 @@ function forEachArticle() {
     .firestore()
     .collection("Beers")
     .orderBy("time", "desc")
-    .onSnapshot((articles) => {
-      articleDIV.innerHTML = "";
-      console.log(articles);
-      articles.forEach((article) => {
-        createArticleContent(article);
-      });
+    .onSnapshot((Beers) => {
+      console.log(Beers);
+      // articles.forEach((article) => {
+      //   createArticleContent(article);
+      // });
     });
 }
+forEachArticle();
 
 const BeerCard = ({ beers }) => {
   const { beerName } = useParams();
