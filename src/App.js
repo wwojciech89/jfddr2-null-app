@@ -2,6 +2,8 @@ import "./App.css";
 import BeerTile from "./components/BeerTile";
 import TileContainer from "./components/TileContainer";
 import Header from "./components/Header";
+import BeerCard from "./components/BeerCard";
+import { Switch, Route, Link, useLocation } from "react-router-dom";
 
 const beerDB = [
   { name: "Mocne", type: "Ipa", foto: "http://placekitten.com/100/120" },
@@ -12,16 +14,54 @@ const beerDB = [
   { name: "Złe", type: "Ale", foto: "http://placekitten.com/99/121" },
 ];
 
+const HomeButton = () => {
+  return (
+    <Link to={`/`}>
+      <button>"HOME"</button>
+    </Link>
+  );
+};
+
 function App() {
+  let location = useLocation();
+
   return (
     <div className="App">
       <Header />
       <TileContainer>
-        {beerDB.map((bear) => {
-          return (
-            <BeerTile name={bear.name} type={bear.type} foto={bear.foto} />
-          );
-        })}
+        <Switch
+        // location={location}
+        >
+          <Route
+            exact
+            path="/"
+            children={beerDB.map((beer, i) => {
+              return (
+                <Link key={i} to={`/dupa/${beer.name}`}>
+                  <BeerTile
+                    name={beer.name}
+                    type={beer.type}
+                    foto={beer.foto}
+                  />
+                </Link>
+              );
+            })}
+          />
+          {/* <Route
+            path="/dupa/:beerType"
+            children={<BeerCard beers={beerDB} />}
+          /> */}
+          {/* O CO CHO Z USE useParams */}
+          {/* O CO CHO z LOCATION */}
+
+          <Route path="/dupa/:beerName">
+            <>
+              <HomeButton />
+
+              <BeerCard beers={beerDB} />
+            </>
+          </Route>
+        </Switch>
       </TileContainer>
     </div>
   );
