@@ -1,7 +1,22 @@
 import React from "react";
 import "./BeerCard.css";
+import firebase from "firebase/app";
 
 import { useParams } from "react-router-dom";
+
+function forEachArticle() {
+  firebase
+    .firestore()
+    .collection("Beers")
+    .orderBy("time", "desc")
+    .onSnapshot((articles) => {
+      articleDIV.innerHTML = "";
+      console.log(articles);
+      articles.forEach((article) => {
+        createArticleContent(article);
+      });
+    });
+}
 
 const BeerCard = ({ beers }) => {
   const { beerName } = useParams();
