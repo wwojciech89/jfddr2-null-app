@@ -12,6 +12,7 @@ const TileContainer = () => {
       .get()
       .then((snapshot) => {
         const beers = snapshot.docs.map((beer) => {
+          console.log(beer.id);
           return beer.data();
         });
         setBeers(beers);
