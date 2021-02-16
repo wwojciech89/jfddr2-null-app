@@ -14,14 +14,6 @@ const beerDB = [
   { name: "Złe", type: "Ale", foto: "http://placekitten.com/99/121" },
 ];
 
-const HomeButton = () => {
-  return (
-    <Link to={`/`}>
-      <button>"HOME"</button>
-    </Link>
-  );
-};
-
 function App() {
   let location = useLocation();
 
@@ -31,10 +23,9 @@ function App() {
       <TileContainer />
 
       <Switch>
-        <Route path="/beers/:beerName">
+        <Route path="/beers/:id">
           <>
-            <HomeButton />
-            <BeerCard beers={beerDB} />
+            <BeerCard />
           </>
         </Route>
       </Switch>

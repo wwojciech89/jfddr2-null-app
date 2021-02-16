@@ -25,7 +25,11 @@ const TileContainer = () => {
       <div className="TileContainer__div">
         {beers &&
           beers.map((beer, index) => {
-            return <BeerTile key={index} {...beer} />;
+            return (
+              <>
+                <BeerTile key={index} {...beer} />
+              </>
+            );
           })}
       </div>
     </main>
