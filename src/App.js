@@ -1,10 +1,9 @@
 import "./App.css";
 import firebase from "firebase/app";
-import BeerTile from "./components/BeerTile";
 import TileContainer from "./components/TileContainer";
 import Header from "./components/Header";
 import BeerCard from "./components/BeerCard";
-import { Switch, Route, Link, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -24,16 +23,18 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <TileContainer beers={beers} />
+      <Router>
+        <Header />
+        <TileContainer beers={beers} />
 
-      <Switch>
-        <Route path="/beers/:id">
-          <>
-            <BeerCard beers={beers} />
-          </>
-        </Route>
-      </Switch>
+        <Switch>
+          <Route path="/beers/:id">
+            <>
+              <BeerCard beers={beers} />
+            </>
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

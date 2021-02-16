@@ -50,10 +50,7 @@ function BeerCard({ beers }) {
                 </tr>
                 <tr>
                   <td>Pochodzenie:</td>
-                  <td>
-                    {beer.origin}
-                    Polska
-                  </td>
+                  <td>{beer.origin}</td>
                 </tr>
                 <tr>
                   <td>Ekstrakt:</td>
@@ -64,10 +61,7 @@ function BeerCard({ beers }) {
                 </tr>
                 <tr>
                   <td>Pojemność:</td>
-                  <td>
-                    {beer.volume}
-                    500
-                  </td>
+                  <td>{beer.volume}</td>
                 </tr>
                 <tr>
                   <td>Gorycz:</td>
@@ -77,7 +71,7 @@ function BeerCard({ beers }) {
             </table>
             <p>
               <strong>Składniki:</strong>
-              {beer.ingedients}
+              {beer.ingredients}
             </p>
           </div>
         </div>
