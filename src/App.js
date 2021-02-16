@@ -1,31 +1,36 @@
 import "./App.css";
+import firebase from "firebase/app";
 import BeerTile from "./components/BeerTile";
 import TileContainer from "./components/TileContainer";
 import Header from "./components/Header";
 import BeerCard from "./components/BeerCard";
 import { Switch, Route, Link, useLocation } from "react-router-dom";
-
-const beerDB = [
-  { name: "Mocne", type: "Ipa", foto: "http://placekitten.com/100/120" },
-  { name: "Słabe", type: "Apa", foto: "http://placekitten.com/101/120" },
-  { name: "Gorzkie", type: "Pills", foto: "http://placekitten.com/99/120" },
-  { name: "Słodkie", type: "Porter", foto: "http://placekitten.com/100/119" },
-  { name: "Dobre", type: "Full", foto: "http://placekitten.com/100/121" },
-  { name: "Złe", type: "Ale", foto: "http://placekitten.com/99/121" },
-];
+import { useEffect, useState } from "react";
 
 function App() {
-  let location = useLocation();
+  const db = firebase.firestore();
+  const [beers, setBeers] = useState([]);
+  useEffect(() => {
+    db.collection("Beers")
+      .get()
+      .then((snapshot) => {
+        const beers = snapshot.docs.map((beer) => {
+          console.log(beer.id);
+          return { id: beer.id, ...beer.data() };
+        });
+        setBeers(beers);
+      });
+  }, [db]);
 
   return (
     <div className="App">
       <Header />
-      <TileContainer />
+      <TileContainer beers={beers} />
 
       <Switch>
         <Route path="/beers/:id">
           <>
-            <BeerCard />
+            <BeerCard beers={beers} />
           </>
         </Route>
       </Switch>

@@ -1,41 +1,24 @@
 import React from "react";
 import "./BeerCard.css";
 import "firebase/firestore";
-import firebase from "../Firebase/firebase";
-import { Switch, Route, Link, useLocation } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
-import { useParams } from "react-router-dom";
+const HomeButton = () => {
+  return (
+    <Link to={`/`}>
+      <button>"HOME"</button>
+    </Link>
+  );
+};
 
-// function renderMappedBeer() {
-//   firebase
-//     .firestore()
-//     .collection("Beers")
-//     .onSnapshot((Beers) => {
-//       Beers.docs.forEach((beer) => {});
-//     });
-// }
-// renderMappedBeer();
+function BeerCard({ beers }) {
+  let { id } = useParams();
 
-// function createArticleContent(beer) {
-//   return console.log(beer.data());
-// }
+  let beer = beers.find((element) => element.id === id);
 
-function BeerCard(beer) {
-  // const { beerName } = useParams();
-  // const foundBeer = beers.find((beer) => beer.name === beerName);
-  // const { name, type, picture } = foundBeer;
-
-  // let { id } = useParams();
-
-  // beer = data.find((element) => element.id === parseInt(id, 10));
-
-  const HomeButton = () => {
-    return (
-      <Link to={`/`}>
-        <button>"HOME"</button>
-      </Link>
-    );
-  };
+  if (beer === undefined) {
+    return null;
+  }
 
   return (
     <>
@@ -102,4 +85,5 @@ function BeerCard(beer) {
     </>
   );
 }
+
 export default BeerCard;
