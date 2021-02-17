@@ -27,7 +27,12 @@
   margin-left: 5vw;
 }
 .BeerCard .product_name {
+  text-align: center;
   margin: 10vh 0 15vh 0;
+  background-color: #153121;
+  color: whitesmoke;
+  border-radius: 30px;
+  padding: 0 10% 0 10%;
 }
 
 .BeerCard .product_name,
@@ -51,13 +56,13 @@
 }
 .BeerCard td {
   padding-right: 5px;
-  border-bottom: 1px solid rgb(80, 109, 68);
+  border-bottom: 1px solid #153121;
 }
 .BeerCard button {
   margin: 10px 10px 10px 2px;
   font-size: 9px;
-  height: 30px;
-  width: 55px;
+  height: 25px;
+  width: 50px;
   background-color: white;
   box-shadow: 2px 2px 2px 2px rgb(216, 216, 216);
   border: none;
@@ -68,6 +73,7 @@
 .BeerCard button:hover {
   cursor: pointer;
   opacity: 100%;
+  box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
 }
 .BeerCard img {
   width: 100%;
@@ -81,5 +87,11 @@
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+  .BeerCard button {
+    height: 40px;
+    width: 70px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
 }
