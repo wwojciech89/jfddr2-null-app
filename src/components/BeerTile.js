@@ -1,23 +1,22 @@
-import { Link } from "react router dom";
+import { Link } from "react-router-dom";
 import "./BeerTile.css";
 
-const BeerTile = ({ name, manufacturer, picture, type }) => {
+const BeerTile = ({ name, type, picture, brewery, id }) => {
+  
   return (
-    <div className="BeerTile">
-      <div className="manufacture_info">
-        <h1>Rainbow APA{name}</h1>
-        <h2>Wilk{manufacturer}</h2>
+ <Link to={`/beers/${id}`}>
+      <div className="BeerTile">
+        <div className="manufacture_info">
+          <h1>{name}</h1>
+          <h2>{brewery}</h2>
+        </div>
+        <div className="down">g
+        <img src={picture} alt="Girl in a jacket" height="250px" />
+        <h2>{type}</h2>
+       </div>
       </div>
-      <div className="down">
-        <img
-          alt="beerfoto"
-          src="https://firebasestorage.googleapis.com/v0/b/piwko-10443.appspot.com/o/tropical.png?alt=media&token=41d192a4-3636-44a1-8aae-510f6434264d"
-          height="250px"
-        />
-        <h2>Rodzaj{type}</h2>
-      </div>
-    </div>
-  );
-};
+     </Link>
+    );
+  };
 
 export default BeerTile;
