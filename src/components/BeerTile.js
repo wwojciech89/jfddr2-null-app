@@ -7,8 +7,6 @@ const BeerTile = ({ name, type, picture, origin, brewery, id }) => {
         <h3>{name}</h3>
         <h4>{type}</h4>
         <h4>{picture}</h4>
-        <h4>{origin}</h4>
-        <h4>{brewery}</h4>
       </div>
     </Link>
   );

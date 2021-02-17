@@ -54,10 +54,7 @@ function BeerCard({ beers }) {
                 </tr>
                 <tr>
                   <td>Ekstrakt:</td>
-                  <td>
-                    {beer.extract}
-                    20
-                  </td>
+                  <td>{beer.extract}</td>
                 </tr>
                 <tr>
                   <td>Pojemność:</td>

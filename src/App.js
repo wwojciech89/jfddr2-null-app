@@ -23,18 +23,18 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <Header />
-        <TileContainer beers={beers} />
+      <Header />
 
-        <Switch>
-          <Route path="/beers/:id">
-            <>
-              <BeerCard beers={beers} />
-            </>
-          </Route>
-        </Switch>
-      </Router>
+      <Switch>
+        <Route exact path="/">
+          <TileContainer beers={beers} />
+        </Route>
+        <Route path="/beers/:id">
+          <>
+            <BeerCard beers={beers} />
+          </>
+        </Route>
+      </Switch>
     </div>
   );
 }
