@@ -1,9 +1,12 @@
 import "./App.css";
+import BeerTile from "./components/BeerTile";
 
 function App() {
   return (
     <div className="App">
-      <h1>piwko</h1>
+      <h1>
+        <BeerTile />
+      </h1>
     </div>
   );
 }
