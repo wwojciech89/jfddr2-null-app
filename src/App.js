@@ -1,68 +1,40 @@
 import "./App.css";
-import BeerTile from "./components/BeerTile";
+import firebase from "firebase/app";
 import TileContainer from "./components/TileContainer";
 import Header from "./components/Header";
 import BeerCard from "./components/BeerCard";
-import { Switch, Route, Link, useLocation } from "react-router-dom";
-
-const beerDB = [
-  { name: "Mocne", type: "Ipa", foto: "http://placekitten.com/100/120" },
-  { name: "Słabe", type: "Apa", foto: "http://placekitten.com/101/120" },
-  { name: "Gorzkie", type: "Pills", foto: "http://placekitten.com/99/120" },
-  { name: "Słodkie", type: "Porter", foto: "http://placekitten.com/100/119" },
-  { name: "Dobre", type: "Full", foto: "http://placekitten.com/100/121" },
-  { name: "Złe", type: "Ale", foto: "http://placekitten.com/99/121" },
-];
-
-const HomeButton = () => {
-  return (
-    <Link to={`/`}>
-      <button>"HOME"</button>
-    </Link>
-  );
-};
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function App() {
-  let location = useLocation();
+  const db = firebase.firestore();
+  const [beers, setBeers] = useState([]);
+  useEffect(() => {
+    db.collection("Beers")
+      .get()
+      .then((snapshot) => {
+        const beers = snapshot.docs.map((beer) => {
+          console.log(beer.id);
+          return { id: beer.id, ...beer.data() };
+        });
+        setBeers(beers);
+      });
+  }, [db]);
 
   return (
     <div className="App">
       <Header />
-      <TileContainer>
-        <Switch
-        // location={location}
-        >
-          <Route
-            exact
-            path="/"
-            children={beerDB.map((beer, i) => {
-              return (
-                <Link key={i} to={`/dupa/${beer.name}`}>
-                  <BeerTile
-                    name={beer.name}
-                    type={beer.type}
-                    foto={beer.foto}
-                  />
-                </Link>
-              );
-            })}
-          />
-          {/* <Route
-            path="/dupa/:beerType"
-            children={<BeerCard beers={beerDB} />}
-          /> */}
-          {/* O CO CHO Z USE useParams */}
-          {/* O CO CHO z LOCATION */}
 
-          <Route path="/dupa/:beerName">
-            <>
-              <HomeButton />
-
-              <BeerCard beers={beerDB} />
-            </>
-          </Route>
-        </Switch>
-      </TileContainer>
+      <Switch>
+        <Route exact path="/">
+          <TileContainer beers={beers} />
+        </Route>
+        <Route path="/beers/:id">
+          <>
+            <BeerCard beers={beers} />
+          </>
+        </Route>
+      </Switch>
     </div>
   );
 }

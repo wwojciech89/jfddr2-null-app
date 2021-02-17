@@ -1,82 +1,80 @@
 import React from "react";
 import "./BeerCard.css";
+import "firebase/firestore";
+import { Link, useParams } from "react-router-dom";
 
-import { useParams } from "react-router-dom";
-
-const BeerCard = ({ beers }) => {
-  const { beerName } = useParams();
-  const foundBeer = beers.find((beer) => beer.name === beerName);
-  const { name, type, foto } = foundBeer;
-
+const HomeButton = () => {
   return (
-    <div className="BeerCard">
-      <div className="left">
-        {/* <button>POWRÓT</button> */}
-        <img alt="beer picture" scr={foto} />
-      </div>
-      <div className="right">
-        <div className="product_name">
-          <h1>{name}</h1>
-          <h2>
-            AleBrowar
-            {/* {brewery} */}
-          </h2>
-        </div>
-        <div className="product_info">
-          <p>
-            <strong>Informacje:</strong>
-            {/* {description} */}
-            "Miks ananasa, pomarańczy i mango plus zestaw ultra aromatycznych
-            gatunków chmielu. Więcej nie trzeba – łap butelkę, pij na chłodno i
-            poczuj się jak w raju!"
-          </p>
-          <table>
-            <tbody>
-              <tr>
-                <td>Rodzaj:</td>
-                <td>{type}</td>
-              </tr>
-              <tr>
-                <td>Alkohol%:</td>
-                <td>{/* {alcohol} */}8</td>
-              </tr>
-              <tr>
-                <td>Pochodzenie:</td>
-                <td>
-                  {/* {origin} */}
-                  Polska
-                </td>
-              </tr>
-              <tr>
-                <td>Ekstrakt:</td>
-                <td>
-                  {/* {extract} */}
-                  20
-                </td>
-              </tr>
-              <tr>
-                <td>Pojemność:</td>
-                <td>
-                  {/* {volume} */}
-                  500
-                </td>
-              </tr>
-              <tr>
-                <td>Gorycz:</td>
-                {/* <td>{bitterness}</td> */}
-              </tr>
-            </tbody>
-          </table>
-          <p>
-            <strong>Składniki:</strong>
-            {/* {ingredients} */}
-            woda; słody: Pale Ale, Pszeniczny, Wiedeński, Carapils,
-            Zakwaszający; chmiel: Cascade, Citra, Chinook, Centennial, Columbus;
-            dodatki: Candi White Sugar; drożdże: US-05.
-          </p>
-        </div>
-      </div>
-    </div>
+    <Link to={`/`}>
+      <button>"HOME"</button>
+    </Link>
   );
 };
+
+function BeerCard({ beers }) {
+  let { id } = useParams();
+
+  let beer = beers.find((element) => element.id === id);
+
+  if (beer === undefined) {
+    return null;
+  }
+
+  return (
+    <>
+      <HomeButton />
+      <div className="BeerCard">
+        <div className="left">
+          {/* <button>POWRÓT</button> */}
+          <img alt="beer" scr={beer.picture} />
+        </div>
+        <div className="right">
+          <div className="product_name">
+            <h1>{beer.name}</h1>
+            <h2>{beer.brewery}</h2>
+          </div>
+          <div className="product_info">
+            <p>
+              <strong>Informacje:</strong>
+              {beer.description}
+            </p>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Rodzaj:</td>
+                  <td>{beer.type}</td>
+                </tr>
+                <tr>
+                  <td>Alkohol%:</td>
+                  <td>{beer.alcohol}</td>
+                </tr>
+                <tr>
+                  <td>Pochodzenie:</td>
+                  <td>{beer.origin}</td>
+                </tr>
+                <tr>
+                  <td>Ekstrakt:</td>
+                  <td>{beer.extract}</td>
+                </tr>
+                <tr>
+                  <td>Pojemność:</td>
+                  <td>{beer.volume}</td>
+                </tr>
+                <tr>
+                  <td>Gorycz:</td>
+                  {beer.bitterness}
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <strong>Składniki:</strong>
+              {beer.ingredients}
+            </p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
 export default BeerCard;

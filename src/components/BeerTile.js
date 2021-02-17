@@ -1,11 +1,14 @@
-const BeerTile = ({ name, manufacturer, foto, type }) => {
+import { Link } from "react-router-dom";
+
+const BeerTile = ({ name, type, picture, origin, brewery, id }) => {
   return (
-    <div className="BeerTile">
-      <h3>{name}</h3>
-      <h4>{manufacturer}</h4>
-      <img alt="beer foto" src={foto} />
-      <h4>{type}</h4>
-    </div>
+    <Link to={`/beers/${id}`}>
+      <div className="BeerTile">
+        <h3>{name}</h3>
+        <h4>{type}</h4>
+        <h4>{picture}</h4>
+      </div>
+    </Link>
   );
 };
 
