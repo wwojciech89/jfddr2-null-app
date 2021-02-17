@@ -23,9 +23,9 @@ function BeerCard({ beers }) {
   return (
     <>
       <div className="BeerCard">
+        <HomeButton />
         <div className="left">
-          <HomeButton />
-          <img alt="beer" scr={beer.picture} />
+          <img src={beer.picture} alt="Girl in a jacket" height="400px" />
         </div>
         <div className="right">
           <div className="product_name">
