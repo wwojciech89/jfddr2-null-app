@@ -6,7 +6,7 @@ import { Link, useParams } from "react-router-dom";
 const HomeButton = () => {
   return (
     <Link to={`/`}>
-      <button>"HOME"</button>
+      <button>HOME</button>
     </Link>
   );
 };
@@ -22,10 +22,9 @@ function BeerCard({ beers }) {
 
   return (
     <>
-      <HomeButton />
       <div className="BeerCard">
         <div className="left">
-          {/* <button>POWRÓT</button> */}
+          <HomeButton />
           <img alt="beer" scr={beer.picture} />
         </div>
         <div className="right">
