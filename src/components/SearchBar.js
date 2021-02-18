@@ -1,6 +1,8 @@
+import "./SearchBar.css";
+
 const SearchBar = ({ setSearch }) => {
   return (
-    <div>
+    <div className="searchbox">
       <input
         type="text"
         placeholder="wyszukaj piwo..."
