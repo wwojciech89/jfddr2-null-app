@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 function App() {
   const db = firebase.firestore();
   const [beers, setBeers] = useState([]);
+  const [search, setSearch] = useState("");
   useEffect(() => {
     db.collection("Beers")
       .get()
@@ -23,11 +24,11 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header setSearch={setSearch} />
 
       <Switch>
         <Route exact path="/">
-          <TileContainer beers={beers} />
+          <TileContainer beers={beers} search={search} />
         </Route>
         <Route path="/beers/:id">
           <>
