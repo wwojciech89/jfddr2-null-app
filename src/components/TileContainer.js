@@ -10,14 +10,17 @@ const TileContainer = ({ beers, search }) => {
       <div className="TileContainer__div">
         {beers &&
           beers
-            .filter((beer) => {
-              if (search == "") {
-                return beer;
-              } else if (
-                beer.name.toLowerCase().includes(search.toLowerCase())
-              ) {
-                return beer;
-              }
+            .filter(({ name, brewery }) => {
+              return (
+                name
+                  .trim()
+                  .toLowerCase()
+                  .includes(search.trim().toLowerCase()) ||
+                brewery
+                  .trim()
+                  .toLowerCase()
+                  .includes(search.trim().toLowerCase())
+              );
             })
             .map((beer, index) => {
               return (
