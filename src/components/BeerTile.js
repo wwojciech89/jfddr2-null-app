@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./BeerTile.css";
 
 const BeerTile = ({ name, type, picture, origin, brewery, id }) => {
   return (
@@ -6,7 +7,8 @@ const BeerTile = ({ name, type, picture, origin, brewery, id }) => {
       <div className="BeerTile">
         <h3>{name}</h3>
         <h4>{type}</h4>
-        <img src={picture} alt="Girl in a jacket" height="250px" />
+        <img src={picture} alt="Girl in a jacket" height="160px" />
+        <h4>{brewery}</h4>
       </div>
     </Link>
   );
