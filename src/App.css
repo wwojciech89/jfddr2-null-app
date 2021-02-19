@@ -44,22 +44,7 @@
   justify-content: center;
 }
 
-.BeerTile {
-  background-color: lightgrey;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 125px;
-  height: 200px;
-  margin: 10px;
-  border-radius: 5px;
-}
-
 @media only screen and (min-width: 768px) {
-  .BeerTile {
-    width: 250px;
-    height: 400px;
-  }
   .Header {
     font-size: 24px;
     letter-spacing: 24px;
