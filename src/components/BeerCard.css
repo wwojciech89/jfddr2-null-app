@@ -20,7 +20,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-top: 3vh;
+  margin: 10px 10px 0 10px;
   width: 100%;
 }
 .BeerCard-box {
@@ -110,6 +110,9 @@
   .BeerCard-box {
     flex-direction: row-reverse;
     align-items: flex-start;
+  }
+  .BeerCard-rating {
+    margin-top: 10vh;
   }
 }
 @media screen and (min-width: 768px) {
