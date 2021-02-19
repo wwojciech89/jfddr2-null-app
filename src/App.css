@@ -16,12 +16,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: white;
   color: #153121;
   -webkit-box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
   letter-spacing: 10px;
-  font-size: 14px;
+  font-size: 20px;
+  height: 90px;
 }
 
 .TileContainer__p {
@@ -48,6 +50,8 @@
   .Header {
     font-size: 24px;
     letter-spacing: 24px;
+    display: flex;
+    flex-direction: row;
   }
   .TileContainer__p {
     font-size: 20px;
