@@ -1,0 +1,27 @@
+.searchbox {
+  display: flex;
+  justify-content: center;
+  height: 20px;
+  width: 30vw;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #153121;
+}
+input {
+  border: none;
+  width: 75%;
+  color: #153121;
+  font-size: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+@media only screen and (min-width: 768px) {
+  input {
+    font-size: 16px;
+  }
+  .searchbox {
+    height: 30px;
+  }
+}
