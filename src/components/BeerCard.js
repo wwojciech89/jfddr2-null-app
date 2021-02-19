@@ -23,9 +23,12 @@ function BeerCard({ beers }) {
   return (
     <>
       <div className="BeerCard">
-        <HomeButton />
         <div className="left">
-          <img src={beer.picture} alt="Girl in a jacket" height="400px" />
+          <HomeButton />
+          <div className="BeerCard-box">
+            <div className="BeerCard-rating">rating 1 2 3 4 5</div>
+            <img src={beer.picture} alt="Girl in a jacket" height="400px" />
+          </div>
         </div>
         <div className="right">
           <div className="product_name">
