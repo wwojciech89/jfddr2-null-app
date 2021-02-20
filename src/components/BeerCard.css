@@ -11,7 +11,7 @@
 .BeerCard .left,
 .BeerCard .right {
   display: flex;
-  max-width: 500px;
+  max-width: 600px;
   flex-direction: row;
 }
 
@@ -113,6 +113,12 @@
   }
   .BeerCard-rating {
     margin-top: 10vh;
+  }
+  .BeerCard {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5vh;
   }
 }
 @media screen and (min-width: 768px) {

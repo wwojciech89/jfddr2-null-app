@@ -1,11 +1,12 @@
 .searchbox {
   display: flex;
   justify-content: center;
-  height: 20px;
-  width: 30vw;
+  height: 25px;
+  width: 230px;
   border-radius: 20px;
   background-color: transparent;
   border: 1px solid #153121;
+  min-width: 200px;
 }
 input {
   border: none;
@@ -22,6 +23,8 @@ input:focus {
     font-size: 16px;
   }
   .searchbox {
-    height: 30px;
+    height: 35px;
+    max-width: 400px;
+    width: 300px;
   }
 }
