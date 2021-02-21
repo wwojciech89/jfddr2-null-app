@@ -3,6 +3,7 @@ import firebase from "firebase/app";
 import TileContainer from "./components/TileContainer";
 import Header from "./components/Header";
 import BeerCard from "./components/BeerCard";
+import AdminPanel from "./components/AdminPanel";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -33,6 +34,11 @@ function App() {
         <Route path="/beers/:id">
           <>
             <BeerCard beers={beers} />
+          </>
+        </Route>
+        <Route path="/admin">
+          <>
+            <AdminPanel />
           </>
         </Route>
       </Switch>
