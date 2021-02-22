@@ -4,6 +4,7 @@ const BeerCardComments = () => {
   return (
     <div className="Comments-box">
       <ul>
+        <h3>Komentarze</h3>
         <li>zajebiste piwo</li>
         <li>zajebiste piwo</li>
         <li>zajebiste piwo</li>
