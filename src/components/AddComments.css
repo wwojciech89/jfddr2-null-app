@@ -1,0 +1,14 @@
+.Input_box {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  height: 100px;
+  min-width: 300px;
+}
+.Input_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
