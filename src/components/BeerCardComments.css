@@ -1,0 +1,17 @@
+.Comments-box {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+.Comments-box ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 600px;
+  border: 1px solid black;
+}
+.Comments-box li {
+  width: 500px;
+  border: 1px solid black;
+}
