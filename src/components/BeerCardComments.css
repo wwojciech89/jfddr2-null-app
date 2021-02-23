@@ -25,4 +25,9 @@
   border-radius: 10px;
   margin: 5px 0 5px 0;
   min-height: 30px;
+  background-color: #ebebeb;
+  color: black;
+}
+.Comments-box ul h3 {
+  color: white;
 }
