@@ -1,8 +1,9 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import "./RatingStars.css";
 const RatingStars = () => {
   return (
-    <label>
+    <label className="Rating_stars">
       <input type="radio" name="rating" value="1" />
       <FaStar />
       <input type="radio" name="rating" value="2" />
