@@ -14,11 +14,13 @@
   min-width: 300px;
   margin: 5% 0 5% 0;
   width: 90%;
+  background-color: #153121;
+  color: white;
 }
 .Comments-box li {
   font-size: 12px;
   width: 90%;
-  border: 1px solid #153121;
+  border: 1px solid white;
   list-style: none;
   border-radius: 10px;
   margin: 5px 0 5px 0;

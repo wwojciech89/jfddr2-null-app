@@ -6,6 +6,8 @@
   border-radius: 10px;
   height: 100px;
   width: 90%;
+  background-color: #153121;
+  color: white;
 }
 .Input_form {
   display: flex;
