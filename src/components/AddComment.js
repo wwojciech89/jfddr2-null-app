@@ -4,7 +4,9 @@ const AddComments = () => {
   return (
     <div className="Input_box">
       <form className="Input_form">
-        <label>Oceń i skomentuj</label>
+        <label>
+          <h3>Oceń i skomentuj</h3>
+        </label>
         <RatingStars />
         <textarea></textarea>
         <input className="Input_submit" type="submit" value="Submit"></input>
