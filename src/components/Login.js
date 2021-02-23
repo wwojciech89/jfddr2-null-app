@@ -1,5 +1,14 @@
 import firebase from "../Firebase/firebase.js";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
+const HomeButton = () => {
+  return (
+    <Link to={`/`}>
+      <button>HOME</button>
+    </Link>
+  );
+};
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -34,6 +43,7 @@ const Login = () => {
 
   return (
     <div style={{ margin: "40px" }}>
+      <HomeButton />
       <form
         onSubmit={(e) => {
           createNewUser();

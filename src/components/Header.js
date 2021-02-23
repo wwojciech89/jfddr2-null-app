@@ -1,5 +1,6 @@
 import SearchBar from "./SearchBar";
 import firebase from "../Firebase/firebase.js";
+import { Link } from "react-router-dom";
 
 const Avatar = ({ isLoggedIn }) => {
   const logout = () => {
@@ -14,7 +15,11 @@ const Avatar = ({ isLoggedIn }) => {
       </>
     );
   }
-  return null;
+  return (
+    <Link to={`/login`}>
+      <button style={{ margin: "20px" }}> ZALOGUJ MNIE </button>
+    </Link>
+  );
 };
 
 const Header = ({ setSearch, isLoggedIn }) => {
