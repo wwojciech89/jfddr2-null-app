@@ -40,7 +40,7 @@ function BeerCard({ beers }) {
               <h2>{beer.brewery}</h2>
             </div>
             <div className="product_info">
-              <p>
+              <p className="BeerCard_description">
                 <strong>Informacje:</strong>
                 {beer.description}
               </p>
@@ -72,7 +72,7 @@ function BeerCard({ beers }) {
                   </tr>
                 </tbody>
               </table>
-              <p>
+              <p className="BeerCard_description">
                 <strong>Składniki:</strong>
                 {beer.ingredients}
               </p>
