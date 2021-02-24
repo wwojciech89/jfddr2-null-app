@@ -6,6 +6,7 @@ import BeerCardComments from "./BeerCardComments";
 import "./BeerCardComments.css";
 import AddComments from "./AddComment";
 import { FaStar } from "react-icons/fa";
+import Rating_stars from "./RatingStars";
 const HomeButton = () => {
   return (
     <Link to={`/`}>
@@ -31,18 +32,7 @@ function BeerCard({ beers }) {
             <HomeButton />
             <div className="BeerCard-box">
               <div className="BeerCard-rating">
-                <label className="Rating_stars">
-                  <input type="radio" name="rating" value="1" />
-                  <FaStar />
-                  <input type="radio" name="rating" value="2" />
-                  <FaStar />
-                  <input type="radio" name="rating" value="3" />
-                  <FaStar />
-                  <input type="radio" name="rating" value="4" />
-                  <FaStar />
-                  <input type="radio" name="rating" value="5" />
-                  <FaStar />
-                </label>
+                <Rating_stars />
               </div>
               <img src={beer.picture} alt="Girl in a jacket" height="400px" />
             </div>
