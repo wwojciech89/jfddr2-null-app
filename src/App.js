@@ -38,26 +38,7 @@ function App() {
     <div className="App">
       <Header setSearch={setSearch} isLoggedIn={isUserLogged} />
 
-      <Switch>
-        <Route exact path="/">
-          <TileContainer beers={beers} search={search} />
-        </Route>
-        <Route path="/beers/:id">
-          <>
-            <BeerCard beers={beers} />
-          </>
-        </Route>
-        <Route path="/login">
-          <>
-            <Login />
-          </>
-        </Route>
-        <Route path="/admin">
-          <>
-            <AdminPanel />
-          </>
-        </Route>
-      </Switch>
+      <Login />
     </div>
   );
 }
