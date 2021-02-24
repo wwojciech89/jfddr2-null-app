@@ -6,29 +6,27 @@ import { useState } from "react";
 const Rating = ({ beers }) => {
   //average
   //average to setrate
-  const [rate, setRate] = useState(null);
+  const [rating, setRating] = useState(null);
 
-  const getAverage = (grades) => {
-    const avarge = grades.reduce((total, amount) => total + amount);
-    return avarge / grades.length;
-  };
+  const RateArray = [1, 2, 4, 5];
+  function average(nums) {
+    return (nums.reduce((a, b) => a + b) / nums.length).toFixed(0);
+  }
+
+  let Rate = average(RateArray);
+  // setRating(Rate);
+  console.log(Rate);
   return (
     <div className="Rating_stars">
       {[...Array(5)].map((star, i) => {
-        const starValue = i + 1;
+        const rateValue = 3;
         return (
           <label>
-            <input
-              type="radio"
-              name="rating"
-              value={starValue}
-              onClick={(e) => setRate(starValue)}
-            />
-            <FaStar size={20} color={starValue <= rate ? "red" : "grey"} />
+            <FaStar size={20} />
           </label>
         );
       })}
-      <p className="Rating_number">{rate}/5</p>
+      <p className="Rating_number">{Rate}/5</p>
     </div>
   );
 };
