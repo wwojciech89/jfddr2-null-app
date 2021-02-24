@@ -5,7 +5,6 @@ import { Link, useParams } from "react-router-dom";
 import BeerCardComments from "./BeerCardComments";
 import "./BeerCardComments.css";
 import AddComments from "./AddComment";
-import { FaStar } from "react-icons/fa";
 import Rating_stars from "./RatingStars";
 const HomeButton = () => {
   return (

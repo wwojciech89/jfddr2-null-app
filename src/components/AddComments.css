@@ -46,7 +46,7 @@ textarea {
 @media screen and (min-width: 768px) {
   .Input_submit {
     font-size: 14px;
-    height: 30px;
+    height: 50px;
     width: 70px;
   }
 }

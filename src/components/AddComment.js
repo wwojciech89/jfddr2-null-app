@@ -7,7 +7,7 @@ const AddComments = () => {
         <h3>Oceń i skomentuj</h3>
         <RatingStars />
         <textarea></textarea>
-        <input className="Input_submit" type="submit" value="Submit"></input>
+        <input className="Input_submit" type="submit" value="Dodaj"></input>
       </form>
     </div>
   );
