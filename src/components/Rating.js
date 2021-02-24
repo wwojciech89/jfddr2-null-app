@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa";
 import "./RatingStars.css";
 import { useState } from "react";
 
-const Rating = () => {
+const Rating = ({ beers }) => {
   //average
   //average to setrate
   const [rate, setRate] = useState(null);
