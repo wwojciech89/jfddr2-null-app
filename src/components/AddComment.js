@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 
 const AddComments = () => {
-  const [state, setState] = useState("");
+  const [comment, setComment] = useState("");
   const [rate, setRate] = useState(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(rate, state);
+    console.log(rate, comment);
   };
 
   return (
@@ -36,8 +36,8 @@ const AddComments = () => {
         <input
           type="text"
           required
-          value={state}
-          onChange={(e) => setState(e.target.value)}
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
         ></input>
         <input
           id="name"
