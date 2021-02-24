@@ -25,7 +25,7 @@ const AddComments = () => {
                   name="rating"
                   value={starValue}
                   onClick={(e) => setRate(starValue)}
-                  required
+                  // required
                 />
                 <FaStar size={20} color={starValue <= rate ? "red" : "grey"} />
               </label>
