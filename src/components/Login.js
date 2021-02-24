@@ -1,7 +1,7 @@
 import firebase from "../Firebase/firebase.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
+import "./Login.css";
 const HomeButton = () => {
   return (
     <Link to={`/`}>
@@ -44,6 +44,7 @@ const Login = () => {
   return (
     <div style={{ margin: "40px" }}>
       <HomeButton />
+      <h2>Zarejestruj się </h2>
       <form
         onSubmit={(e) => {
           createNewUser();
@@ -67,9 +68,13 @@ const Login = () => {
           />
         </label>
 
-        <input type="submit" value="Zarejestruj użytkownika"></input>
+        <input
+          type="submit"
+          value="Zarejestruj użytkownika"
+          className="Button"
+        ></input>
       </form>
-      ----------------------------
+      <h2>Zaloguj się </h2>
       <form
         onSubmit={(e) => {
           signIn();
@@ -93,7 +98,11 @@ const Login = () => {
           />
         </label>
 
-        <input type="submit" value="Zaloguj użytkownika"></input>
+        <input
+          type="submit"
+          value="Zaloguj użytkownika"
+          className="Button"
+        ></input>
       </form>
     </div>
 
