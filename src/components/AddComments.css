@@ -44,7 +44,7 @@ textarea {
   border-radius: 10px;
 }
 
-.Rating_stars input[type="radio"] {
+.Input_form input[type="radio"] {
   display: none;
 }
 .Rating_number {
