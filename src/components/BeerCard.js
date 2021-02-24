@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import BeerCardComments from "./BeerCardComments";
 import "./BeerCardComments.css";
 import AddComments from "./AddComment";
-
+import { FaStar } from "react-icons/fa";
 const HomeButton = () => {
   return (
     <Link to={`/`}>
@@ -30,7 +30,20 @@ function BeerCard({ beers }) {
           <div className="left">
             <HomeButton />
             <div className="BeerCard-box">
-              <div className="BeerCard-rating">rating 1 2 3 4 5</div>
+              <div className="BeerCard-rating">
+                <label className="Rating_stars">
+                  <input type="radio" name="rating" value="1" />
+                  <FaStar />
+                  <input type="radio" name="rating" value="2" />
+                  <FaStar />
+                  <input type="radio" name="rating" value="3" />
+                  <FaStar />
+                  <input type="radio" name="rating" value="4" />
+                  <FaStar />
+                  <input type="radio" name="rating" value="5" />
+                  <FaStar />
+                </label>
+              </div>
               <img src={beer.picture} alt="Girl in a jacket" height="400px" />
             </div>
           </div>
