@@ -6,11 +6,11 @@ import { useState } from "react";
 const RatingStars = () => {
   const [rate, setRate] = useState(null);
   return (
-    <div>
+    <div className="Rating_stars">
       {[...Array(5)].map((star, i) => {
         const starValue = i + 1;
         return (
-          <label className="Rating_stars">
+          <label>
             <input
               type="radio"
               name="rating"
@@ -21,6 +21,7 @@ const RatingStars = () => {
           </label>
         );
       })}
+      <p className="Rating_number">{rate}/5</p>
     </div>
   );
 };
