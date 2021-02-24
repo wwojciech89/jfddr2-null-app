@@ -17,7 +17,7 @@ const RatingStars = () => {
               value={starValue}
               onClick={(e) => setRate(starValue)}
             />
-            <FaStar />
+            <FaStar color={starValue <= rate ? "grey" : "red"} />
           </label>
         );
       })}
