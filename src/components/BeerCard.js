@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import BeerCardComments from "./BeerCardComments";
 import "./BeerCardComments.css";
 import AddComments from "./AddComment";
-import Rating_stars from "./RatingStars";
+import Rating from "./Rating";
 const HomeButton = () => {
   return (
     <Link to={`/`}>
@@ -31,7 +31,7 @@ function BeerCard({ beers }) {
             <HomeButton />
             <div className="BeerCard-box">
               <div className="BeerCard-rating">
-                <Rating_stars />
+                <Rating />
               </div>
               <img src={beer.picture} alt="Girl in a jacket" height="400px" />
             </div>

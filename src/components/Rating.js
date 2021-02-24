@@ -3,10 +3,15 @@ import { FaStar } from "react-icons/fa";
 import "./RatingStars.css";
 import { useState } from "react";
 
-const RatingStars = () => {
+const Rating = () => {
   //average
   //average to setrate
   const [rate, setRate] = useState(null);
+
+  const getAverage = (grades) => {
+    const avarge = grades.reduce((total, amount) => total + amount);
+    return avarge / grades.length;
+  };
   return (
     <div className="Rating_stars">
       {[...Array(5)].map((star, i) => {
@@ -28,4 +33,4 @@ const RatingStars = () => {
   );
 };
 
-export default RatingStars;
+export default Rating;
