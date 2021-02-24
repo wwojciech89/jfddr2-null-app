@@ -43,6 +43,15 @@ textarea {
 .text {
   border-radius: 10px;
 }
+
+.Rating_stars input[type="radio"] {
+  display: none;
+}
+.Rating_number {
+  font-size: 24px;
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   .Input_submit {
     font-size: 14px;

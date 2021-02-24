@@ -6,7 +6,7 @@ import { useState } from "react";
 const RatingStars = () => {
   //average
   //average to setrate
-  const [rate, setRate] = useState(null);
+  const [state, setState] = useState("");
   return (
     <div className="Rating_stars">
       {[...Array(5)].map((star, i) => {
@@ -17,13 +17,14 @@ const RatingStars = () => {
               type="radio"
               name="rating"
               value={starValue}
-              onClick={(e) => setRate(starValue)}
+              onClick={(e) => setState(starValue)}
+              required
             />
-            <FaStar size={20} color={starValue <= rate ? "red" : "grey"} />
+            <FaStar size={20} color={starValue <= state ? "red" : "grey"} />
           </label>
         );
       })}
-      <p className="Rating_number">{rate}/5</p>
+      <p className="Rating_number">{state}/5</p>
     </div>
   );
 };
