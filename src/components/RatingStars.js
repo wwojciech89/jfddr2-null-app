@@ -1,20 +1,27 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import "./RatingStars.css";
+import { useState } from "react";
+
 const RatingStars = () => {
+  const [rate, setRate] = useState(null);
   return (
-    <label className="Rating_stars">
-      <input type="radio" name="rating" value="1" />
-      <FaStar />
-      <input type="radio" name="rating" value="2" />
-      <FaStar />
-      <input type="radio" name="rating" value="3" />
-      <FaStar />
-      <input type="radio" name="rating" value="4" />
-      <FaStar />
-      <input type="radio" name="rating" value="5" />
-      <FaStar />
-    </label>
+    <div>
+      {[...Array(5)].map((star, i) => {
+        const starValue = i + 1;
+        return (
+          <label className="Rating_stars">
+            <input
+              type="radio"
+              name="rating"
+              value={starValue}
+              onClick={(e) => setRate(starValue)}
+            />
+            <FaStar />
+          </label>
+        );
+      })}
+    </div>
   );
 };
 
