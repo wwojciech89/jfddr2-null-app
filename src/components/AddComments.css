@@ -49,9 +49,9 @@ Hidden input type='radio'
 display: none robi input radio bezuzyteczny 
 */
 .Input_form input[type="radio"] {
-  height: 0;
-  color: white;
+  opacity: 0;
 }
+
 .Rating_number {
   font-size: 24px;
   text-align: center;
