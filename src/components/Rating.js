@@ -1,28 +1,22 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import { useState } from "react";
+// import { useState } from "react";
 
 const Rating = () => {
-  //average
-  //average to setrate
+  //example array
   const RateArray = [4, 3, 3, 5];
 
   function average(nums) {
-    return (nums.reduce((a, b) => a + b) / nums.length).toFixed(0);
+    return nums.reduce((a, b) => a + b, 0) / nums.length;
   }
   let Rate = average(RateArray);
-  // // setRating(Rate);
   console.log(Rate);
   return (
     <div className="Rating_stars">
-      {/* {[...Array(5)].map((star, i) => {
-        return (
-          <label>
-            <FaStar size={20} color={Rate > 0 ? "grey" : "red"} />
-          </label>
-        );
-      })} */}
-      <p className="Rating_number">{Rate}/5</p>
+      {Array.from({ length: 5 }, (_, index) => (
+        <FaStar key={index} highlighted={index <= average} />
+      ))}
+      <p className="Rating_number">{Math.round(Rate)}/5</p>
     </div>
   );
 };
