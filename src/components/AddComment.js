@@ -10,10 +10,12 @@ const AddComments = () => {
     e.preventDefault();
     console.log(rate, comment);
   };
+  //Gdy robię input radio display:none, input przestaje jakby działać.
   //Nie moge ustawic walidacji na dwa inputy. Komentarz wystawia bez oceny ale oceny bez komentarza nie.
   //Jeśli jest required w input="radio" wywala błąd "An invalid form control with name='rating' is not focusable."
   //Jak to ogarnąć żeby required był na dwa inputy.
   //Po stronie Firebasa?
+  //AddComments.css
   return (
     <div className="Input_box">
       <form className="Input_form" onSubmit={handleSubmit}>

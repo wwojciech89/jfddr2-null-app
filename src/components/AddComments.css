@@ -46,6 +46,7 @@ textarea {
 
 /* 
 Hidden input type='radio' 
+display: none robi input radio bezuzyteczny 
 */
 .Input_form input[type="radio"] {
   height: 0;
