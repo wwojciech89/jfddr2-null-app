@@ -44,8 +44,12 @@ textarea {
   border-radius: 10px;
 }
 
+/* 
+Hidden input type='radio' 
+*/
 .Input_form input[type="radio"] {
-  display: none;
+  height: 0;
+  color: white;
 }
 .Rating_number {
   font-size: 24px;
