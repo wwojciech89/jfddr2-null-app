@@ -1,22 +1,25 @@
+.BeerCard-container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(247, 247, 247);
+}
+
 .BeerCard {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100vw;
-  height: 100vh;
-  background-color: rgb(247, 247, 247);
-  box-shadow: 10px 10px 10px 10px rgba(223, 223, 223, 0.2);
-}
-.BeerCard .left,
-.BeerCard .right {
-  display: flex;
-  max-width: 600px;
-  flex-direction: row;
+  max-width: 1400px;
+
+  /* box-shadow: 10px 10px 10px 10px rgba(223, 223, 223, 0.2); */
 }
 
 .BeerCard .left {
   display: flex;
+  max-width: 500px;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
@@ -35,7 +38,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 5vw;
+  max-width: 700px;
 }
 .BeerCard .product_name {
   text-align: center;
@@ -53,16 +56,11 @@
   margin: 10px;
 }
 
-.BeerCard p {
+.BeerCard_description {
   font-size: 14px;
   padding: 1rem;
 }
 
-.BeerCard li {
-  font-size: 14px;
-  list-style-type: none;
-  padding: 5px;
-}
 .BeerCard table {
   border-collapse: collapse;
   width: 90%;
@@ -119,6 +117,9 @@
     align-items: flex-start;
     justify-content: center;
     padding-top: 5vh;
+  }
+  .BeerCard .right {
+    margin-top: 5vh;
   }
 }
 @media screen and (min-width: 768px) {
