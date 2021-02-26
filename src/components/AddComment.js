@@ -18,6 +18,7 @@ const AddComments = ({ id, token }) => {
           login: token.email,
           text: comment,
         }),
+        rating: firebase.firestore.FieldValue.arrayUnion(rate),
       });
 
     e.preventDefault();
