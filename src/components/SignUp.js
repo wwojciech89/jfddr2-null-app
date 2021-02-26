@@ -11,7 +11,7 @@ const HomeButton = () => {
   );
 };
 
-const Login = () => {
+const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -22,6 +22,18 @@ const Login = () => {
       email: "tu będzie email",
     });
   };
+
+  // const createNewUser = () => {
+  //   firebase
+  //     .auth()
+  //     .createUserWithEmailAndPassword(email, password)
+  //     .then((token) => {
+  //       console.log(token);
+  //     })
+  //     .then(() => {
+  //       logout();
+  //     });
+  // };
 
   const createNewUser = () => {
     firebase
@@ -55,10 +67,9 @@ const Login = () => {
   return (
     <div style={{ margin: "40px" }}>
       <HomeButton />
-
       <form
         onSubmit={(e) => {
-          signIn();
+          createNewUser();
           e.preventDefault();
         }}
       >
@@ -66,7 +77,7 @@ const Login = () => {
           email:
           <input
             onChange={(e) => {
-              setUserEmail(e.target.value);
+              setEmail(e.target.value);
             }}
           />
         </label>
@@ -74,20 +85,20 @@ const Login = () => {
           password:
           <input
             onChange={(e) => {
-              setUserPassword(e.target.value);
+              setPassword(e.target.value);
             }}
           />
         </label>
 
-        <input type="submit" value="Zaloguj mnie"></input>
+        <input type="submit" value="Zarejestruj mnie"></input>
       </form>
-      <Link to={`/signup`}>
-        <button>Nie masz konta? Zarejestruj się!</button>
+      <Link to={`/login`}>
+        <button>
+          Masz konto? <br></br>Zaloguj się!
+        </button>
       </Link>
     </div>
-
-    // -----------
   );
 };
 
-export default Login;
+export default SignUp;

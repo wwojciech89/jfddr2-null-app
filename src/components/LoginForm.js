@@ -1,8 +1,7 @@
 import firebase from "../Firebase/firebase.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./login.css";
-
+import "./loginForm.css";
 const HomeButton = () => {
   return (
     <Link to={`/`}>
@@ -17,21 +16,16 @@ const Login = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
 
-  const addNewUserToDB = () => {
-    firebase.firestore().collection("Users").add({
-      email: "tu będzie email",
-    });
-  };
-
   const createNewUser = () => {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .then((token) => {
-        firebase.firestore().collection("Users").doc(token.user.uid).set({
-          email: token.user.email,
-        });
+        console.log(token);
       });
+    //   .then(() => {
+    //     logout();
+    //   });
   };
 
   const signIn = (event) => {
@@ -39,12 +33,7 @@ const Login = () => {
       .auth()
       .signInWithEmailAndPassword(userEmail, userPassword)
       .then((token) => {
-        console.log(
-          "UID usera to " +
-            token.user.uid +
-            " Email usera to " +
-            token.user.email
-        );
+        console.log(token);
       });
   };
 
@@ -55,7 +44,37 @@ const Login = () => {
   return (
     <div style={{ margin: "40px" }}>
       <HomeButton />
+      <h2>Zarejestruj się </h2>
+      <form
+        onSubmit={(e) => {
+          createNewUser();
+          e.preventDefault();
+        }}
+      >
+        <label>
+          email:
+          <input
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+          />
+        </label>
+        <label>
+          password:
+          <input
+            onChange={(e) => {
+              setPassword(e.target.value);
+            }}
+          />
+        </label>
 
+        <input
+          type="submit"
+          value="Zarejestruj użytkownika"
+          className="Button"
+        ></input>
+      </form>
+      <h2>Zaloguj się </h2>
       <form
         onSubmit={(e) => {
           signIn();
@@ -79,11 +98,12 @@ const Login = () => {
           />
         </label>
 
-        <input type="submit" value="Zaloguj mnie"></input>
+        <input
+          type="submit"
+          value="Zaloguj użytkownika"
+          className="Button"
+        ></input>
       </form>
-      <Link to={`/signup`}>
-        <button>Nie masz konta? Zarejestruj się!</button>
-      </Link>
     </div>
 
     // -----------

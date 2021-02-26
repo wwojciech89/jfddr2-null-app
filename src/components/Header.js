@@ -25,7 +25,9 @@ const Avatar = ({ isLoggedIn }) => {
 const Header = ({ setSearch, isLoggedIn }) => {
   return (
     <div className="Header">
-      <h1>PIWKO</h1>
+      <Link to={`/`}>
+        <h1 className="logo">PIWKO</h1>
+      </Link>
       <SearchBar setSearch={setSearch} />
       <Avatar isLoggedIn={isLoggedIn} />
     </div>
