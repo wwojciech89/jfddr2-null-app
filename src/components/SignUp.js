@@ -68,6 +68,7 @@ const SignUp = () => {
     <div style={{ margin: "40px" }}>
       <HomeButton />
       <form
+        className="form"
         onSubmit={(e) => {
           createNewUser();
           e.preventDefault();
@@ -76,6 +77,7 @@ const SignUp = () => {
         <label>
           email:
           <input
+            className="formInput"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -84,13 +86,18 @@ const SignUp = () => {
         <label>
           password:
           <input
+            className="formInput"
             onChange={(e) => {
               setPassword(e.target.value);
             }}
           />
         </label>
 
-        <input type="submit" value="Zarejestruj mnie"></input>
+        <input
+          className="formInput"
+          type="submit"
+          value="Zarejestruj mnie"
+        ></input>
       </form>
       <Link to={`/login`}>
         <button>
