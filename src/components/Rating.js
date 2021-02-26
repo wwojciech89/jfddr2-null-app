@@ -13,9 +13,9 @@ const Rating = () => {
   console.log(Rate);
   return (
     <div className="Rating_stars">
-      {Array.from({ length: 5 }, (_, index) => (
+      {/* {Array.from({ length: 5 }, (_, index) => (
         <FaStar key={index} highlighted={index <= average} />
-      ))}
+      ))} */}
       <p className="Rating_number">{Math.round(Rate)}/5</p>
     </div>
   );
