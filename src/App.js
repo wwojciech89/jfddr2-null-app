@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import BeerCard from "./components/BeerCard";
 import AdminPanel from "./components/AdminPanel";
 import Login from "./components/Login";
+import SignUp from "./components/SignUp";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -50,6 +51,11 @@ function App() {
         <Route path="/login">
           <>
             <Login />
+          </>
+        </Route>
+        <Route path="/signup">
+          <>
+            <SignUp />
           </>
         </Route>
         <Route path="/admin">
