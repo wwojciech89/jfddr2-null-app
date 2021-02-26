@@ -23,18 +23,6 @@ const SignUp = () => {
     });
   };
 
-  // const createNewUser = () => {
-  //   firebase
-  //     .auth()
-  //     .createUserWithEmailAndPassword(email, password)
-  //     .then((token) => {
-  //       console.log(token);
-  //     })
-  //     .then(() => {
-  //       logout();
-  //     });
-  // };
-
   const createNewUser = () => {
     firebase
       .auth()

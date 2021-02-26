@@ -1,3 +1,4 @@
+import "./header.css";
 import SearchBar from "./SearchBar";
 import firebase from "../Firebase/firebase.js";
 import { Link } from "react-router-dom";
@@ -17,16 +18,16 @@ const Avatar = ({ isLoggedIn }) => {
   }
   return (
     <Link to={`/login`}>
-      <button style={{ margin: "20px" }}> ZALOGUJ MNIE </button>
+      <button className="header__button"> ZALOGUJ MNIE </button>
     </Link>
   );
 };
 
 const Header = ({ setSearch, isLoggedIn }) => {
   return (
-    <div className="Header">
+    <div className="header">
       <Link to={`/`}>
-        <h1 className="logo">PIWKO</h1>
+        <h1 className="header__logo">PIWKO</h1>
       </Link>
       <SearchBar setSearch={setSearch} />
       <Avatar isLoggedIn={isLoggedIn} />

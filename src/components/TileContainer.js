@@ -2,6 +2,7 @@ import BeerTile from "../components/BeerTile";
 import "firebase/firestore";
 // import { SearchBar } from "./SearchBar";
 import { useState } from "react";
+import "./tileContainer.css";
 
 const TileContainer = ({ beers, search }) => {
   return (
