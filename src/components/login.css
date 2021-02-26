@@ -2,7 +2,7 @@
 }
 @media screen and (min-width: 1024px) {
 }
-form {
+.form {
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -52,7 +52,7 @@ button:hover {
   background-color: #153121;
 }
 
-input {
+.formInput {
   display: flex;
   flex-direction: column;
   font-size: 15px;
