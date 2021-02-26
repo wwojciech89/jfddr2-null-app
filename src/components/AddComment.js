@@ -1,12 +1,25 @@
 import "./AddComments.css";
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import firebase from "../Firebase/firebase.js";
 
-const AddComments = () => {
+const AddComments = ({ id, token }) => {
   const [comment, setComment] = useState("");
   const [rate, setRate] = useState(null);
+  console.log(id);
 
   const handleSubmit = (e) => {
+    firebase
+      .firestore()
+      .collection("Beers")
+      .doc(id)
+      .update({
+        commentary: firebase.firestore.FieldValue.arrayUnion({
+          login: token.email,
+          text: comment,
+        }),
+      });
+
     e.preventDefault();
     console.log(rate, comment);
   };

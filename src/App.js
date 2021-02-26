@@ -14,10 +14,12 @@ function App() {
   const [beers, setBeers] = useState([]);
   const [search, setSearch] = useState("");
   const [isUserLogged, setIsUserLogged] = useState(false);
+  const [token, setToken] = useState(null);
 
   firebase.auth().onAuthStateChanged((token) => {
     if (token !== null) {
       setIsUserLogged(true);
+      setToken(token);
     } else {
       setIsUserLogged(false);
     }
@@ -28,7 +30,6 @@ function App() {
       .get()
       .then((snapshot) => {
         const beers = snapshot.docs.map((beer) => {
-          // console.log(beer.id);
           return { id: beer.id, ...beer.data() };
         });
         setBeers(beers);
@@ -45,7 +46,7 @@ function App() {
         </Route>
         <Route path="/beers/:id">
           <>
-            <BeerCard beers={beers} />
+            <BeerCard beers={beers} token={token} />
           </>
         </Route>
         <Route path="/login">
