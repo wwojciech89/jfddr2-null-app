@@ -1,22 +1,32 @@
 import "./BeerCardComments.css";
 
 const BeerCardComments = ({ beers, id }) => {
-  let filterBeers;
+  let filteredBeers;
+  let filterdCommentary = [];
 
   function elo() {
-    filterBeers = beers.filter((el) => {
+    filteredBeers = beers.filter((el) => {
       return el.id === id;
     });
-    filterBeers[0].commentary.map((el) => {
+    filteredBeers[0].commentary.map((el) => {
       console.log(el);
+      filterdCommentary.push(el);
+    });
+    filterdCommentary.map((el) => {
+      return (
+        <div className="commentary__container">
+          <p className="commentary__login">{el.login}</p>
+          <p className="commentary__text">{el.text}</p>
+        </div>
+      );
     });
   }
-  elo();
 
   return (
     <div className="Comments-box">
       <ul>
         <h3>Komentarze</h3>
+        {elo()}
       </ul>
     </div>
   );
