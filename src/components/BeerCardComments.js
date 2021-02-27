@@ -8,12 +8,12 @@ const BeerCardComments = ({ beers, id }) => {
     filteredBeers = beers.filter((el) => {
       return el.id === id;
     });
-    filteredBeers[0].commentary.map((el, key) => {
+    filteredBeers[0].commentary.map((el) => {
       return filterdCommentary.push(el);
     });
-    const mapped = filterdCommentary.map((el) => {
+    const mapped = filterdCommentary.map((el, key) => {
       return (
-        <li>
+        <li key={key}>
           <div className="commentary__container">
             <p className="commentary__login">{el.login}</p>
             <p className="commentary__text">{el.text}</p>

@@ -34,10 +34,10 @@ const AddComments = ({ id, token }) => {
       <form className="Input_form" onSubmit={handleSubmit}>
         <div>
           <h3>Oceń i skomentuj</h3>
-          {[...Array(5)].map((star, i) => {
+          {[...Array(5)].map((star, i, key) => {
             const starValue = i + 1;
             return (
-              <label>
+              <label key={i}>
                 <input
                   type="radio"
                   name="rating"
