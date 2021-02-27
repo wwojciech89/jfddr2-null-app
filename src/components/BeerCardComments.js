@@ -8,10 +8,8 @@ const BeerCardComments = ({ beers, id }) => {
     filteredBeers = beers.filter((el) => {
       return el.id === id;
     });
-    filteredBeers[0].commentary.map((el) => {
-      console.log(el);
-      filterdCommentary.push(el);
-      console.log(filterdCommentary);
+    filteredBeers[0].commentary.map((el, key) => {
+      return filterdCommentary.push(el);
     });
     const mapped = filterdCommentary.map((el) => {
       return (

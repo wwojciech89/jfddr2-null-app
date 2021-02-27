@@ -6,7 +6,6 @@ import firebase from "../Firebase/firebase.js";
 const AddComments = ({ id, token }) => {
   const [comment, setComment] = useState("");
   const [rate, setRate] = useState(null);
-  console.log(id);
 
   const handleSubmit = (e) => {
     firebase
@@ -15,7 +14,7 @@ const AddComments = ({ id, token }) => {
       .doc(id)
       .update({
         commentary: firebase.firestore.FieldValue.arrayUnion({
-          login: token.email,
+          login: token.email.split("@")[0],
           text: comment,
         }),
         rating: firebase.firestore.FieldValue.arrayUnion(rate),
