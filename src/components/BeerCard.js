@@ -14,7 +14,7 @@ const HomeButton = () => {
   );
 };
 
-function BeerCard({ beers, token }) {
+function BeerCard({ beers, token, setBeers }) {
   let { id } = useParams();
 
   let beer = beers.find((element) => element.id === id);
@@ -79,7 +79,7 @@ function BeerCard({ beers, token }) {
                 {beer.ingredients}
               </p>
             </div>
-            <AddComments id={id} token={token} />
+            <AddComments id={id} token={token} setBeers={setBeers} />
           </div>
           <BeerCardComments id={id} beers={beers} />
         </div>

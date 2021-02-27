@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import firebase from "../Firebase/firebase.js";
 
-const AddComments = ({ id, token }) => {
+const AddComments = ({ id, token, setBeers }) => {
   const [comment, setComment] = useState("");
   const [rate, setRate] = useState(null);
 
@@ -18,10 +18,21 @@ const AddComments = ({ id, token }) => {
           text: comment,
         }),
         rating: firebase.firestore.FieldValue.arrayUnion(rate),
+      })
+      .then((e) => {
+        firebase
+          .firestore()
+          .collection("Beers")
+          .get()
+          .then((snapshot) => {
+            const beers = snapshot.docs.map((beer) => {
+              return { id: beer.id, ...beer.data() };
+            });
+            setBeers(beers);
+          });
       });
 
     e.preventDefault();
-    console.log(rate, comment);
   };
   //Gdy robię input radio display:none, input przestaje jakby działać.
   //Nie moge ustawic walidacji na dwa inputy. Komentarz wystawia bez oceny ale oceny bez komentarza nie.
@@ -34,7 +45,7 @@ const AddComments = ({ id, token }) => {
       <form className="Input_form" onSubmit={handleSubmit}>
         <div>
           <h3>Oceń i skomentuj</h3>
-          {[...Array(5)].map((star, i, key) => {
+          {[...Array(5)].map((star, i) => {
             const starValue = i + 1;
             return (
               <label key={i}>

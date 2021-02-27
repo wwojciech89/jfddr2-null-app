@@ -15,6 +15,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [isUserLogged, setIsUserLogged] = useState(false);
   const [token, setToken] = useState(null);
+  console.log(beers);
 
   firebase.auth().onAuthStateChanged((token) => {
     if (token !== null) {
@@ -46,7 +47,7 @@ function App() {
         </Route>
         <Route path="/beers/:id">
           <>
-            <BeerCard beers={beers} token={token} />
+            <BeerCard beers={beers} token={token} setBeers={setBeers} />
           </>
         </Route>
         <Route path="/login">
