@@ -17,6 +17,19 @@ function App() {
   const [token, setToken] = useState(null);
   console.log(beers);
 
+  function fetchBeers() {
+    firebase
+      .firestore()
+      .collection("Beers")
+      .get()
+      .then((snapshot) => {
+        const beers = snapshot.docs.map((beer) => {
+          return { id: beer.id, ...beer.data() };
+        });
+        setBeers(beers);
+      });
+  }
+
   firebase.auth().onAuthStateChanged((token) => {
     if (token !== null) {
       setIsUserLogged(true);
@@ -26,16 +39,7 @@ function App() {
     }
   });
 
-  useEffect(() => {
-    db.collection("Beers")
-      .get()
-      .then((snapshot) => {
-        const beers = snapshot.docs.map((beer) => {
-          return { id: beer.id, ...beer.data() };
-        });
-        setBeers(beers);
-      });
-  }, [db]);
+  useEffect(fetchBeers, []);
 
   return (
     <div className="App">
@@ -47,7 +51,7 @@ function App() {
         </Route>
         <Route path="/beers/:id">
           <>
-            <BeerCard beers={beers} token={token} setBeers={setBeers} />
+            <BeerCard beers={beers} token={token} fetchBeers={fetchBeers} />
           </>
         </Route>
         <Route path="/login">

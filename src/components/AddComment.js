@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import firebase from "../Firebase/firebase.js";
 
-const AddComments = ({ id, token, setBeers }) => {
+const AddComments = ({ id, token, fetchBeers }) => {
   const [comment, setComment] = useState("");
   const [rate, setRate] = useState(null);
 
@@ -19,18 +19,7 @@ const AddComments = ({ id, token, setBeers }) => {
         }),
         rating: firebase.firestore.FieldValue.arrayUnion(rate),
       })
-      .then((e) => {
-        firebase
-          .firestore()
-          .collection("Beers")
-          .get()
-          .then((snapshot) => {
-            const beers = snapshot.docs.map((beer) => {
-              return { id: beer.id, ...beer.data() };
-            });
-            setBeers(beers);
-          });
-      });
+      .then(fetchBeers);
 
     e.preventDefault();
   };
