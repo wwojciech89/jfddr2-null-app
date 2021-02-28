@@ -16,7 +16,6 @@ const AddComments = ({ id, token, fetchBeers }) => {
       .then((elements) => {
         const previousRating = elements.data().rating;
         previousRating.push(rate);
-        console.log("previousRating", previousRating);
 
         firebase
           .firestore()
