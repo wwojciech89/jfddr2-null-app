@@ -31,7 +31,7 @@ function BeerCard({ beers, token, fetchBeers }) {
             <HomeButton />
             <div className="BeerCard-box">
               <div className="BeerCard-rating">
-                <Rating />
+                <Rating id={id} beers={beers} />
               </div>
               <img src={beer.picture} alt="Girl in a jacket" height="400px" />
             </div>

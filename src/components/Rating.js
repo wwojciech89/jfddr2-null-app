@@ -1,9 +1,15 @@
 import React from "react";
 // import { useState } from "react";
 
-const Rating = () => {
-  //example array
-  const RateArray = [4, 3, 3, 5];
+const Rating = ({ beers, id }) => {
+  let filteredBeers;
+  let filterdRating = [];
+
+  filteredBeers = beers.filter((el) => {
+    return el.id === id;
+  });
+  console.log(filteredBeers[0].rating);
+  const RateArray = filteredBeers[0].rating;
 
   function average(nums) {
     return nums.reduce((a, b) => a + b, 0) / nums.length;
