@@ -32,6 +32,8 @@ const AddComments = ({ id, token, fetchBeers }) => {
           .then(fetchBeers);
       });
     e.preventDefault();
+    setComment("");
+    setRate(null);
   };
   //Gdy robię input radio display:none, input przestaje jakby działać.
   //Nie moge ustawic walidacji na dwa inputy. Komentarz wystawia bez oceny ale oceny bez komentarza nie.
