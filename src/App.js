@@ -6,16 +6,14 @@ import BeerCard from "./components/BeerCard";
 import AdminPanel from "./components/AdminPanel";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function App() {
-  const db = firebase.firestore();
   const [beers, setBeers] = useState([]);
   const [search, setSearch] = useState("");
   const [isUserLogged, setIsUserLogged] = useState(false);
   const [token, setToken] = useState(null);
-  console.log(beers);
 
   function fetchBeers() {
     firebase

@@ -1,5 +1,4 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
 // import { useState } from "react";
 
 const Rating = () => {
@@ -10,7 +9,7 @@ const Rating = () => {
     return nums.reduce((a, b) => a + b, 0) / nums.length;
   }
   let Rate = average(RateArray);
-  console.log(Rate);
+
   return (
     <div className="Rating_stars">
       {/* {Array.from({ length: 5 }, (_, index) => (

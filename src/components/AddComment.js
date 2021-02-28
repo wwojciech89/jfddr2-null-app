@@ -12,15 +12,26 @@ const AddComments = ({ id, token, fetchBeers }) => {
       .firestore()
       .collection("Beers")
       .doc(id)
-      .update({
-        commentary: firebase.firestore.FieldValue.arrayUnion({
-          login: token.email.split("@")[0],
-          text: comment,
-        }),
-        rating: firebase.firestore.FieldValue.arrayUnion(rate),
-      })
-      .then(fetchBeers);
+      .get()
+      .then((elements) => {
+        const previousRating = elements.data().rating;
+        previousRating.push(rate);
+        console.log("previousRating", previousRating);
 
+        firebase
+          .firestore()
+          .collection("Beers")
+          .doc(id)
+          .update({
+            commentary: firebase.firestore.FieldValue.arrayUnion({
+              login: token.email.split("@")[0],
+              text: comment,
+            }),
+            rating: previousRating,
+          })
+
+          .then(fetchBeers);
+      });
     e.preventDefault();
   };
   //Gdy robię input radio display:none, input przestaje jakby działać.
