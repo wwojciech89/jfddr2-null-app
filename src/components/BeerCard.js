@@ -6,13 +6,8 @@ import BeerCardComments from "./BeerCardComments";
 import "./BeerCardComments.css";
 import AddComments from "./AddComment";
 import Rating from "./Rating";
-const HomeButton = () => {
-  return (
-    <Link to={`/`}>
-      <button>HOME</button>
-    </Link>
-  );
-};
+
+import HomeButton from "./HomeButton";
 
 function BeerCard({ beers }) {
   let { id } = useParams();
@@ -26,9 +21,9 @@ function BeerCard({ beers }) {
   return (
     <>
       <div className="BeerCard-container">
+        <HomeButton />
         <div className="BeerCard">
           <div className="left">
-            <HomeButton />
             <div className="BeerCard-box">
               <div className="BeerCard-rating">
                 <Rating />
