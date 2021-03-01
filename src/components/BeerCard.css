@@ -3,7 +3,7 @@
   height: auto;
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(84, 167, 84);
 }
 
 .BeerCard {
@@ -43,7 +43,7 @@
   max-width: 600px;
   background-color: #0e552c;
   color: white;
-
+  margin-top: 20px;
   box-shadow: 1px 5px 5px 10px #0e552c;
 }
 .BeerCard .product_name {
