@@ -65,7 +65,7 @@ function BeerCard({ beers, token, fetchBeers }) {
                   </tr>
                   <tr>
                     <td>Gorycz:</td>
-                    {beer.bitterness}
+                    <td>{beer.bitterness}</td>
                   </tr>
                 </tbody>
               </table>
