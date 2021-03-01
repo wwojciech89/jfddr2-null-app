@@ -12,11 +12,16 @@
 .BeerTile:hover {
   box-shadow: 5px 5px 5px 5px rgba(223, 226, 218, 0.4);
 }
-h3 {
+.BeerTile__name {
   font-size: 20px;
   color: rgb(2, 27, 2);
 }
-h4 {
+.BeerTile__type {
+  font-size: 13px;
+  color: rgb(2, 27, 2);
+}
+
+.BeerTile__brewery {
   font-size: 13px;
   color: rgb(2, 27, 2);
 }
