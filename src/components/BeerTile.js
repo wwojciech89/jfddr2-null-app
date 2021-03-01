@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "./BeerTile.css";
+import HomeButton from "./HomeButton";
 
 const BeerTile = ({ name, type, picture, origin, brewery, id }) => {
   return (

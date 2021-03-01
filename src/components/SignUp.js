@@ -2,14 +2,7 @@ import firebase from "../Firebase/firebase.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
-
-const HomeButton = () => {
-  return (
-    <Link to={`/`}>
-      <button>HOME</button>
-    </Link>
-  );
-};
+import HomeButton from "./HomeButton";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -22,18 +15,6 @@ const SignUp = () => {
       email: "tu będzie email",
     });
   };
-
-  // const createNewUser = () => {
-  //   firebase
-  //     .auth()
-  //     .createUserWithEmailAndPassword(email, password)
-  //     .then((token) => {
-  //       console.log(token);
-  //     })
-  //     .then(() => {
-  //       logout();
-  //     });
-  // };
 
   const createNewUser = () => {
     firebase
@@ -94,16 +75,16 @@ const SignUp = () => {
         </label>
 
         <input
-          className="formInput"
+          className="login__submit formInput"
           type="submit"
           value="Zarejestruj mnie"
         ></input>
+        <Link to={`/login`}>
+          <button className="signForm__button2">
+            Masz konto? Zaloguj się!
+          </button>
+        </Link>
       </form>
-      <Link to={`/login`}>
-        <button>
-          Masz konto? <br></br>Zaloguj się!
-        </button>
-      </Link>
     </div>
   );
 };

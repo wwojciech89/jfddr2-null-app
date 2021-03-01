@@ -2,14 +2,7 @@ import firebase from "../Firebase/firebase.js";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./login.css";
-
-const HomeButton = () => {
-  return (
-    <Link to={`/`}>
-      <button>HOME</button>
-    </Link>
-  );
-};
+import HomeButton from "./HomeButton";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -81,11 +74,17 @@ const Login = () => {
           />
         </label>
 
-        <input className="formInput" type="submit" value="Zaloguj mnie"></input>
+        <input
+          className="login__submit formInput "
+          type="submit"
+          value="Zaloguj mnie"
+        ></input>
+        <Link to={`/signup`}>
+          <button className="signForm__button2">
+            Nie masz konta? Zarejestruj się!
+          </button>
+        </Link>
       </form>
-      <Link to={`/signup`}>
-        <button>Nie masz konta? Zarejestruj się!</button>
-      </Link>
     </div>
 
     // -----------

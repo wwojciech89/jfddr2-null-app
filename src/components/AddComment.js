@@ -1,14 +1,39 @@
 import "./AddComments.css";
 import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
+import firebase from "../Firebase/firebase.js";
 
-const AddComments = () => {
+const AddComments = ({ id, token, fetchBeers }) => {
   const [comment, setComment] = useState("");
   const [rate, setRate] = useState(null);
 
   const handleSubmit = (e) => {
+    firebase
+      .firestore()
+      .collection("Beers")
+      .doc(id)
+      .get()
+      .then((elements) => {
+        const previousRating = elements.data().rating;
+        previousRating.push(rate);
+
+        firebase
+          .firestore()
+          .collection("Beers")
+          .doc(id)
+          .update({
+            commentary: firebase.firestore.FieldValue.arrayUnion({
+              login: token.email.split("@")[0],
+              text: comment,
+            }),
+            rating: previousRating,
+          })
+
+          .then(fetchBeers);
+      });
     e.preventDefault();
-    console.log(rate, comment);
+    setComment("");
+    setRate(null);
   };
   //Gdy robię input radio display:none, input przestaje jakby działać.
   //Nie moge ustawic walidacji na dwa inputy. Komentarz wystawia bez oceny ale oceny bez komentarza nie.
@@ -24,7 +49,7 @@ const AddComments = () => {
           {[...Array(5)].map((star, i) => {
             const starValue = i + 1;
             return (
-              <label>
+              <label key={i}>
                 <input
                   type="radio"
                   name="rating"

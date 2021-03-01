@@ -34,16 +34,8 @@ form {
   background-color: #153121;
   transform: scale(1.1);
 }
-button {
-  margin: 4px 10px 5px 2px;
-  font-size: 15px;
-  height: 40px;
-  width: 140px;
-  color: white;
-  background-color: #1d412c;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 25px;
+.signForm__button2:hover {
+  color: red;
 }
 
 button:hover {
