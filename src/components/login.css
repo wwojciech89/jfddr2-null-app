@@ -1,0 +1,71 @@
+@media only screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1024px) {
+}
+.form {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid #153121;
+  border-radius: 10px;
+  min-height: 100px;
+  width: 90%;
+  background-color: white;
+  box-shadow: 5px 5px 5px 5px rgba(223, 226, 218, 0.4);
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.Button {
+  margin: 4px 10px 5px 2px;
+  font-size: 15px;
+  height: 40px;
+  width: 170px;
+  color: white;
+  background-color: #1d412c;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.Button:hover {
+  cursor: pointer;
+  background-color: #153121;
+  transform: scale(1.1);
+}
+button {
+  margin: 4px 10px 5px 2px;
+  font-size: 15px;
+  height: 40px;
+  width: 140px;
+  color: white;
+  background-color: #1d412c;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: #153121;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  align-items: stretch;
+  justify-content: center;
+  border: 1px solid #153121;
+  border-radius: 10px;
+  min-height: 25px;
+  width: 90%;
+  background-color: white;
+  box-shadow: 5px 5px 5px 5px rgba(223, 226, 218, 0.4);
+}
+h2 {
+  color: rgb(21, 49, 33);
+}

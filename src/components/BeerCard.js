@@ -2,7 +2,10 @@ import React from "react";
 import "./BeerCard.css";
 import "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
-
+import BeerCardComments from "./BeerCardComments";
+import "./BeerCardComments.css";
+import AddComments from "./AddComment";
+import Rating from "./Rating";
 const HomeButton = () => {
   return (
     <Link to={`/`}>
@@ -22,57 +25,63 @@ function BeerCard({ beers }) {
 
   return (
     <>
-      <div className="BeerCard">
-        <div className="left">
-          <HomeButton />
-          <div className="BeerCard-box">
-            <div className="BeerCard-rating">rating 1 2 3 4 5</div>
-            <img src={beer.picture} alt="Girl in a jacket" height="400px" />
+      <div className="BeerCard-container">
+        <div className="BeerCard">
+          <div className="left">
+            <HomeButton />
+            <div className="BeerCard-box">
+              <div className="BeerCard-rating">
+                <Rating />
+              </div>
+              <img src={beer.picture} alt="Girl in a jacket" height="400px" />
+            </div>
           </div>
-        </div>
-        <div className="right">
-          <div className="product_name">
-            <h1>{beer.name}</h1>
-            <h2>{beer.brewery}</h2>
+          <div className="right">
+            <div className="product_name">
+              <h1>{beer.name}</h1>
+              <h2>{beer.brewery}</h2>
+            </div>
+            <div className="product_info">
+              <p className="BeerCard_description">
+                <strong>Informacje:</strong>
+                {beer.description}
+              </p>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Rodzaj:</td>
+                    <td>{beer.type}</td>
+                  </tr>
+                  <tr>
+                    <td>Alkohol%:</td>
+                    <td>{beer.alcohol}</td>
+                  </tr>
+                  <tr>
+                    <td>Pochodzenie:</td>
+                    <td>{beer.origin}</td>
+                  </tr>
+                  <tr>
+                    <td>Ekstrakt:</td>
+                    <td>{beer.extract}</td>
+                  </tr>
+                  <tr>
+                    <td>Pojemność:</td>
+                    <td>{beer.volume}</td>
+                  </tr>
+                  <tr>
+                    <td>Gorycz:</td>
+                    {beer.bitterness}
+                  </tr>
+                </tbody>
+              </table>
+              <p className="BeerCard_description">
+                <strong>Składniki:</strong>
+                {beer.ingredients}
+              </p>
+            </div>
+            <AddComments />
           </div>
-          <div className="product_info">
-            <p>
-              <strong>Informacje:</strong>
-              {beer.description}
-            </p>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Rodzaj:</td>
-                  <td>{beer.type}</td>
-                </tr>
-                <tr>
-                  <td>Alkohol%:</td>
-                  <td>{beer.alcohol}</td>
-                </tr>
-                <tr>
-                  <td>Pochodzenie:</td>
-                  <td>{beer.origin}</td>
-                </tr>
-                <tr>
-                  <td>Ekstrakt:</td>
-                  <td>{beer.extract}</td>
-                </tr>
-                <tr>
-                  <td>Pojemność:</td>
-                  <td>{beer.volume}</td>
-                </tr>
-                <tr>
-                  <td>Gorycz:</td>
-                  {beer.bitterness}
-                </tr>
-              </tbody>
-            </table>
-            <p>
-              <strong>Składniki:</strong>
-              {beer.ingredients}
-            </p>
-          </div>
+          <BeerCardComments />
         </div>
       </div>
     </>
