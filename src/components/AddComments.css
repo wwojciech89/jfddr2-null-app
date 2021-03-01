@@ -23,14 +23,14 @@ textarea {
 }
 
 .Input_submit {
-  margin: 4px 10px 5px 2px;
+  margin: 4px 4px 5px 2px;
   font-size: 9px;
-  height: 25px;
+  height: 20px;
   width: 50px;
   color: white;
   background-color: #1d412c;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .Input_submit:hover {
@@ -60,7 +60,7 @@ display: none robi input radio bezuzyteczny
 @media screen and (min-width: 768px) {
   .Input_submit {
     font-size: 14px;
-    height: 50px;
+    height: 35px;
     width: 70px;
   }
 }
