@@ -1,7 +1,7 @@
 import BeerTile from "../components/BeerTile";
 import "firebase/firestore";
-// nimport { SearchBar } from "./SearchBar";
-import { useState } from "react";
+// import { SearchBar } from "./SearchBar";
+import "./tileContainer.css";
 
 const TileContainer = ({ beers, search }) => {
   return (
@@ -23,11 +23,7 @@ const TileContainer = ({ beers, search }) => {
               );
             })
             .map((beer, index) => {
-              return (
-                <>
-                  <BeerTile key={index} {...beer} />
-                </>
-              );
+              return <BeerTile key={index} {...beer} />;
             })}
       </div>
     </main>
