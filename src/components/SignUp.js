@@ -27,19 +27,19 @@ const SignUp = () => {
       });
   };
 
-  const signIn = (event) => {
-    firebase
-      .auth()
-      .signInWithEmailAndPassword(userEmail, userPassword)
-      .then((token) => {
-        console.log(
-          "UID usera to " +
-            token.user.uid +
-            " Email usera to " +
-            token.user.email
-        );
-      });
-  };
+  // const signIn = (event) => {
+  //   firebase
+  //     .auth()
+  //     .signInWithEmailAndPassword(userEmail, userPassword)
+  //     .then((token) => {
+  //       console.log(
+  //         "UID usera to " +
+  //           token.user.uid +
+  //           " Email usera to " +
+  //           token.user.email
+  //       );
+  //     });
+  // };
 
   const logout = () => {
     firebase.auth().signOut();
