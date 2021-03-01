@@ -1,38 +1,35 @@
 .Comments-box {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 82%;
   height: auto;
+  color: white;
 }
 .Comments-box ul {
   display: flex;
   align-items: center;
   flex-direction: column;
   max-width: 1200px;
-  border: 1px solid #153121;
-  box-shadow: 5px 5px 5px 5px rgba(223, 226, 218, 0.4);
-  border-radius: 10px;
+  background-color: transparent;
+  color: white;
   min-width: 300px;
   margin: 5% 0 5% 0;
-  padding: 5px;
+  padding-bottom: 20px;
   width: 90%;
-  background-color: white;
-  color: #153121;
 }
 .Comments-box li {
   font-size: 12px;
   width: 90%;
-  border: 1px solid white;
   list-style: none;
   border-radius: 10px;
   margin: 5px 0 5px 0;
   min-height: 30px;
-  background-color: #ebebeb;
+  background-color: rgb(160, 238, 160);
   color: black;
   padding: 5px;
 }
 .Comments-box ul h3 {
-  color: #153121;
+  color: white;
 }
 
 .commentary__container {

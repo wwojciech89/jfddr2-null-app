@@ -2,13 +2,10 @@
   display: flex;
   align-items: stretch;
   justify-content: center;
-  border: 1px solid #153121;
-  border-radius: 10px;
+
   min-height: 130px;
-  width: 90%;
-  background-color: white;
-  color: #153121;
-  box-shadow: 5px 5px 5px 5px rgba(223, 226, 218, 0.4);
+  width: 100%;
+  border-top: 1px solid white;
 }
 .Input_form {
   display: flex;
@@ -17,18 +14,14 @@
   width: 90%;
   text-align: center;
 }
-textarea {
-  min-height: 30%;
-  font-size: 12px;
-}
 
 .Input_submit {
   margin: 4px 4px 5px 2px;
   font-size: 9px;
-  height: 20px;
-  width: 50px;
+  height: 30px;
+  width: 60px;
   color: white;
-  background-color: #1d412c;
+  background-color: rgb(62, 136, 62);
   border: none;
   border-radius: 15px;
 }
@@ -38,10 +31,6 @@ textarea {
   transform: scale(1.2);
 
   background-color: #153121;
-}
-
-.text {
-  border-radius: 10px;
 }
 
 /* 
