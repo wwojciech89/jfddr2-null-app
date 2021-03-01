@@ -5,7 +5,8 @@
 
   min-height: 130px;
   width: 100%;
-  border-top: 1px solid white;
+  border: 4px solid rgb(62, 136, 62, 0.5);
+  border-radius: 5px;
 }
 .Input_form {
   display: flex;
@@ -14,7 +15,13 @@
   width: 90%;
   text-align: center;
 }
-
+.Rating_text {
+  background-color: rgb(160, 238, 160);
+  outline: none;
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+}
 .Input_submit {
   margin: 4px 4px 5px 2px;
   font-size: 9px;
