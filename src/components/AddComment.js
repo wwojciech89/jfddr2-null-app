@@ -61,7 +61,6 @@ const AddComments = ({ id, token, fetchBeers }) => {
               </label>
             );
           })}
-          <p className="Rating_number">{rate}/5</p>
         </div>
         <input
           type="text"
