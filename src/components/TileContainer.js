@@ -1,6 +1,7 @@
 import BeerTile from "../components/BeerTile";
 import "firebase/firestore";
 // import { SearchBar } from "./SearchBar";
+import "./tileContainer.css";
 
 const TileContainer = ({ beers, search }) => {
   return (

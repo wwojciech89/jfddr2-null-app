@@ -1,8 +1,6 @@
-@media only screen and (min-width: 768px) {
-}
-@media screen and (min-width: 1024px) {
-}
 .form {
+  margin: auto;
+  margin-top: 100px;
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -17,39 +15,22 @@
   margin-bottom: 25px;
 }
 
-.Button {
-  margin: 4px 10px 5px 2px;
-  font-size: 15px;
-  height: 40px;
-  width: 170px;
-  color: white;
-  background-color: #1d412c;
+.signForm__button2 {
+  margin: auto;
+  margin-top: 10px;
+  background-color: transparent;
   border: none;
-  border-radius: 5px;
-  margin-top: 15px;
+  cursor: pointer;
+  color: blue;
+}
+.signForm__button2:hover {
+  color: red;
 }
 
-.Button:hover {
-  cursor: pointer;
-  background-color: #153121;
-  transform: scale(1.1);
-}
-button {
-  margin: 4px 10px 5px 2px;
-  font-size: 15px;
-  height: 40px;
-  width: 140px;
-  color: white;
-  background-color: #1d412c;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 25px;
-}
-
-button:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  background-color: #153121;
+@media only screen and (min-width: 768px) {
+  .form {
+    margin: auto;
+  }
 }
 
 .formInput {
@@ -63,7 +44,13 @@ button:hover {
   min-height: 25px;
   width: 90%;
   background-color: white;
+
   box-shadow: 5px 5px 5px 5px rgba(223, 226, 218, 0.4);
+  cursor: pointer;
+}
+
+.login__submit:hover {
+  color: red;
 }
 h2 {
   color: rgb(21, 49, 33);
