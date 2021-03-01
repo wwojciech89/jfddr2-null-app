@@ -7,34 +7,38 @@ import BeerCard from "./components/BeerCard";
 import AdminPanel from "./components/AdminPanel";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function App() {
-  const db = firebase.firestore();
   const [beers, setBeers] = useState([]);
   const [search, setSearch] = useState("");
   const [isUserLogged, setIsUserLogged] = useState(false);
+  const [token, setToken] = useState(null);
+
+  function fetchBeers() {
+    firebase
+      .firestore()
+      .collection("Beers")
+      .get()
+      .then((snapshot) => {
+        const beers = snapshot.docs.map((beer) => {
+          return { id: beer.id, ...beer.data() };
+        });
+        setBeers(beers);
+      });
+  }
 
   firebase.auth().onAuthStateChanged((token) => {
     if (token !== null) {
       setIsUserLogged(true);
+      setToken(token);
     } else {
       setIsUserLogged(false);
     }
   });
 
-  useEffect(() => {
-    db.collection("Beers")
-      .get()
-      .then((snapshot) => {
-        const beers = snapshot.docs.map((beer) => {
-          // console.log(beer.id);
-          return { id: beer.id, ...beer.data() };
-        });
-        setBeers(beers);
-      });
-  }, [db]);
+  useEffect(fetchBeers, []);
 
   return (
     <div className="App">
@@ -46,7 +50,7 @@ function App() {
         </Route>
         <Route path="/beers/:id">
           <>
-            <BeerCard beers={beers} />
+            <BeerCard beers={beers} token={token} fetchBeers={fetchBeers} />
           </>
         </Route>
         <Route path="/login">

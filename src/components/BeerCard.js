@@ -9,7 +9,7 @@ import Rating from "./Rating";
 
 import HomeButton from "./HomeButton";
 
-function BeerCard({ beers }) {
+function BeerCard({ beers, token, fetchBeers }) {
   let { id } = useParams();
 
   let beer = beers.find((element) => element.id === id);
@@ -26,7 +26,7 @@ function BeerCard({ beers }) {
           <div className="left">
             <div className="BeerCard-box">
               <div className="BeerCard-rating">
-                <Rating />
+                <Rating id={id} beers={beers} />
               </div>
               <img src={beer.picture} alt="Girl in a jacket" height="400px" />
             </div>
@@ -74,9 +74,9 @@ function BeerCard({ beers }) {
                 {beer.ingredients}
               </p>
             </div>
-            <AddComments />
+            <AddComments id={id} token={token} fetchBeers={fetchBeers} />
           </div>
-          <BeerCardComments />
+          <BeerCardComments id={id} beers={beers} />
         </div>
       </div>
     </>
