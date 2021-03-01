@@ -27,9 +27,13 @@
   background-color: rgb(160, 238, 160);
   color: black;
   padding: 5px;
+  margin: 10px;
+  box-shadow: 4px 2px 4px 4px rgb(160, 238, 160);
 }
 .Comments-box ul h3 {
   color: white;
+  font-family: "Reggae One", cursive;
+  letter-spacing: 3px;
 }
 
 .commentary__container {
