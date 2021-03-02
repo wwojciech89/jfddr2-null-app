@@ -13,6 +13,7 @@
   width: 100%;
   height: 80%;
   max-width: 1400px;
+  background-color: rgb(64, 114, 64);
   box-shadow: 3px 5px 5px 8px rgb(231, 231, 231, 0.8);
 }
 
@@ -20,11 +21,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   height: 100%;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
+  min-height: 450px;
 }
 .BeerCard-box {
   display: flex;
@@ -90,11 +90,14 @@
   box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.3);
 }
 .BeerCard img {
-  width: 30%;
+  width: 35%;
   max-width: 400px;
   height: auto;
 }
-
+.BeerCard-rating {
+  display: flex;
+  align-items: center;
+}
 /* @media screen and (max-width: 1024px) {
   .BeerCard {
     display: flex;
@@ -119,13 +122,15 @@
   }
   .BeerCard {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     margin-top: 50px;
   }
-  .BeerCard .left,
+  .BeerCard .left {
+    width: 40%;
+  }
   .BeerCard .right {
-    width: 50%;
+    width: 60%;
   }
 }
 @media screen and (min-width: 768px) {
@@ -136,6 +141,6 @@
     border-radius: 10px;
   }
   .BeerCard img {
-    width: 50%;
+    width: 45%;
   }
 }
