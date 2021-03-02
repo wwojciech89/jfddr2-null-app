@@ -23,7 +23,7 @@ const TileContainer = ({ beers, search }) => {
               );
             })
             .map((beer, index) => {
-              return <BeerTile key={index} {...beer} />;
+              return <BeerTile key={index} {...beer} beers={beers} />;
             })}
       </div>
     </main>
