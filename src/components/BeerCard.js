@@ -20,24 +20,22 @@ function BeerCard({ beers, token, fetchBeers }) {
 
   return (
     <>
-      <div className="BeerCard-container">
+      <div className="Beercard__container">
         <HomeButton />
-        <div className="BeerCard">
-          <div className="left">
-            <div className="BeerCard-box">
-              <div className="BeerCard-rating">
-                <Rating id={id} beers={beers} />
-              </div>
-              <img src={beer.picture} alt="Girl in a jacket" height="400px" />
+        <div className="Beercard">
+          <div className="Beercard__left">
+            <div className="Beercard__left--rating">
+              <Rating id={id} beers={beers} />
             </div>
+            <img src={beer.picture} alt="Girl in a jacket" height="400px" />
           </div>
-          <div className="right">
-            <div className="product_name">
+          <div className="Beercard__right">
+            <div className="Beercard__right--name">
               <h1>{beer.name}</h1>
               <h2>{beer.brewery}</h2>
             </div>
-            <div className="product_info">
-              <p className="BeerCard_description">
+            <div className="Beercard__right--info">
+              <p className="Beercard__right--description">
                 <strong>Informacje:</strong>
                 {beer.description}
               </p>
@@ -69,7 +67,7 @@ function BeerCard({ beers, token, fetchBeers }) {
                   </tr>
                 </tbody>
               </table>
-              <p className="BeerCard_description">
+              <p className="Beercard__right--description">
                 <strong>Składniki:</strong>
                 {beer.ingredients}
               </p>
