@@ -16,6 +16,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-top: 10%;
+}
+.Beercard__left img {
+  width: 30%;
+  height: auto;
 }
 .Beercard__left--rating {
   font-size: 22px;
@@ -27,4 +32,21 @@
   align-items: center;
 }
 .Beercard__right--name {
+  font-family: "Reggae One", cursive;
+  font-size: 22px;
+}
+.Beercard__right--info {
+  padding: 5%;
+}
+.Beercard__right--description {
+  font-size: 18px;
+}
+.Beercard__right--table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 15px 0 15px 0;
+  font-size: 20px;
+}
+.Beercard__right--table tr {
+  border-bottom: 1px solid black;
 }

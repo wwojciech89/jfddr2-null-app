@@ -39,7 +39,7 @@ function BeerCard({ beers, token, fetchBeers }) {
                 <strong>Informacje:</strong>
                 {beer.description}
               </p>
-              <table>
+              <table className="Beercard__right--table">
                 <tbody>
                   <tr>
                     <td>Rodzaj:</td>
