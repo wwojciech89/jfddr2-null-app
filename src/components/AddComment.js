@@ -42,8 +42,8 @@ const AddComments = ({ id, token, fetchBeers }) => {
   //Po stronie Firebasa?
   //AddComments.css
   return (
-    <div className="Input_box">
-      <form className="Input_form" onSubmit={handleSubmit}>
+    <div className="Input__box">
+      <form className="Input__box--form" onSubmit={handleSubmit}>
         <div>
           <h3>Oceń i skomentuj</h3>
           {[...Array(5)].map((star, i) => {
@@ -67,7 +67,7 @@ const AddComments = ({ id, token, fetchBeers }) => {
           <p className="Rating_number">{rate}/5</p>
         </div>
         <input
-          className="Rating_text"
+          className="Rating__text"
           type="text"
           required
           value={comment}
@@ -75,7 +75,7 @@ const AddComments = ({ id, token, fetchBeers }) => {
         ></input>
         <input
           id="name"
-          className="Input_submit"
+          className="Input__submit"
           type="submit"
           value="Dodaj"
         ></input>

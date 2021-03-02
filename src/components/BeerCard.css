@@ -4,8 +4,12 @@
   display: flex;
   justify-content: center;
   background-color: white;
+  flex-direction: column;
 }
 .Beercard {
+  max-width: 1200px;
+}
+.Beercard__upper {
   width: 100%;
   height: auto;
   display: flex;
@@ -49,4 +53,32 @@
 }
 .Beercard__right--table tr {
   border-bottom: 1px solid black;
+}
+@media screen and (min-width: 1024px) {
+}
+@media screen and (min-width: 768px) {
+  .Beercard__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Beercard__upper {
+    flex-direction: row;
+  }
+  .Beercard__left {
+    width: 40%;
+    flex-direction: row-reverse;
+  }
+  .Beercard__right {
+    width: 60%;
+  }
+  .Beercard__left img {
+    width: 130px;
+    height: auto;
+  }
+  .Beercard__coments {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
 }

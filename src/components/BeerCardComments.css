@@ -1,0 +1,9 @@
+.Comments__box {
+  width: 70%;
+  padding-top: 5%;
+}
+.comments__container {
+}
+.Comments__box li {
+  list-style: none;
+}
