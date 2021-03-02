@@ -8,7 +8,9 @@ import AdminPanel from "./components/AdminPanel";
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import { Switch, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext } from "react";
+
+export const ThemeContext = createContext();
 
 function App() {
   const [beers, setBeers] = useState([]);
@@ -50,7 +52,12 @@ function App() {
         </Route>
         <Route path="/beers/:id">
           <>
-            <BeerCard beers={beers} token={token} fetchBeers={fetchBeers} />
+            <BeerCard
+              beers={beers}
+              token={token}
+              fetchBeers={fetchBeers}
+              isLoggedIn={isUserLogged}
+            />
           </>
         </Route>
         <Route path="/login">

@@ -9,7 +9,7 @@ import Rating from "./Rating";
 
 import HomeButton from "./HomeButton";
 
-function BeerCard({ beers, token, fetchBeers }) {
+function BeerCard({ beers, token, fetchBeers, isLoggedIn }) {
   let { id } = useParams();
 
   let beer = beers.find((element) => element.id === id);
@@ -74,7 +74,12 @@ function BeerCard({ beers, token, fetchBeers }) {
                 {beer.ingredients}
               </p>
             </div>
-            <AddComments id={id} token={token} fetchBeers={fetchBeers} />
+            <AddComments
+              id={id}
+              token={token}
+              fetchBeers={fetchBeers}
+              isLoggedIn={isLoggedIn}
+            />
           </div>
           <BeerCardComments id={id} beers={beers} />
         </div>
