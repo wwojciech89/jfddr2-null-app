@@ -21,7 +21,7 @@ const Rating = ({ beers, id }) => {
           <FaStar
             key={score}
             name="star"
-            color={Math.round(rate) >= score ? "red" : "white"}
+            color={Math.round(rate) >= score ? "red" : "grey"}
             type="solid"
             size={20}
           />

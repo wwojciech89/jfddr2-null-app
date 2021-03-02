@@ -57,7 +57,10 @@ const AddComments = ({ id, token, fetchBeers }) => {
                   onClick={(e) => setRate(starValue)}
                   required
                 />
-                <FaStar size={20} color={starValue <= rate ? "red" : "white"} />
+                <FaStar
+                  size={20}
+                  color={starValue <= rate ? "red" : "lightgrey"}
+                />
               </label>
             );
           })}
