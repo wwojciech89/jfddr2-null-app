@@ -11,8 +11,7 @@ const Avatar = ({ isLoggedIn }) => {
   if (isLoggedIn) {
     return (
       <>
-        <p>🙋‍♂️</p>
-        <button className="btn" onClick={logout}>
+        <button className="header__button" onClick={logout}>
           wyloguj mnie
         </button>
       </>
@@ -20,7 +19,7 @@ const Avatar = ({ isLoggedIn }) => {
   }
   return (
     <Link to={`/login`}>
-      <button className="header__button btn">
+      <button className="header__button">
         ZALOGUJ SIĘ ABY DODAWAĆ KOMENTARZE
       </button>
     </Link>
