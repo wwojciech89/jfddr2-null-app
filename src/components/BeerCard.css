@@ -18,7 +18,6 @@
 
 .BeerCard .left {
   display: flex;
-  max-width: 400px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -30,7 +29,7 @@
 .BeerCard-box {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-around;
 }
 
@@ -39,7 +38,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 800px;
+  width: 100%;
   background-color: #0e552c;
   color: white;
   height: 100%;
@@ -123,6 +122,10 @@
     align-items: flex-start;
     justify-content: center;
     margin-top: 50px;
+  }
+  .BeerCard .left,
+  .BeerCard .right {
+    width: 50%;
   }
 }
 @media screen and (min-width: 768px) {

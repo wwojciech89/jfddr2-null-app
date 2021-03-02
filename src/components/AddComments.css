@@ -6,6 +6,7 @@
   width: 100%;
   background-color: #153121;
   border: 1px solid #153121;
+  padding-top: 10px;
 }
 .Input_form {
   display: flex;
