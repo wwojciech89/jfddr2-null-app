@@ -54,6 +54,14 @@
 .Beercard__right--table tr {
   border-bottom: 1px solid black;
 }
+.Beercard__coments {
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 10px;
+  padding-top: 3%;
+  width: 100%;
+}
 @media screen and (min-width: 1024px) {
 }
 @media screen and (min-width: 768px) {
@@ -78,7 +86,10 @@
   }
   .Beercard__coments {
     display: flex;
+    justify-content: center;
     flex-direction: row;
     padding: 10px;
+    padding-top: 3%;
+    width: 100%;
   }
 }

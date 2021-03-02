@@ -1,9 +1,20 @@
 .Comments__box {
-  width: 70%;
-  padding-top: 5%;
+  width: 60%;
+  text-align: center;
+}
+.Comments__box h3 {
+  font-size: 24px;
+  font-family: "Reggae One", cursive;
 }
 .comments__container {
 }
 .Comments__box li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
   list-style: none;
+  background-color: grey;
+}
+.Comments__box li p {
 }

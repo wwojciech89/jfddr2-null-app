@@ -14,10 +14,8 @@ const BeerCardComments = ({ beers, id }) => {
     const mapped = filterdCommentary.map((el, key) => {
       return (
         <li key={key}>
-          <div className="comments__container">
-            <p className="comments__login">{el.login}</p>
-            <p className="comments__text">{el.text}</p>
-          </div>
+          <p className="comments__login">{el.login}</p>
+          <p className="comments__text">{el.text}</p>
         </li>
       );
     });
