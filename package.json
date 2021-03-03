@@ -51,5 +51,6 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
-  }
+  },
+  "homepage": "https://infoshareacademy.github.io/jfddr2-null-app/"
 }
