@@ -75,7 +75,7 @@ function BeerCard({ beers, token, fetchBeers, isLoggedIn }) {
               </div>
             </div>
           </div>
-          <div className="Beercard__coments">
+          <div className="Beercard__comments">
             <AddComments
               id={id}
               token={token}

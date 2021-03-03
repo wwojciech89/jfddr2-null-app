@@ -54,10 +54,10 @@
 .Beercard__right--table tr {
   border-bottom: 1px solid black;
 }
-.Beercard__coments {
+.Beercard__comments {
   display: flex;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   padding: 10px;
   padding-top: 3%;
   width: 100%;
@@ -84,7 +84,7 @@
     width: 130px;
     height: auto;
   }
-  .Beercard__coments {
+  .Beercard__comments {
     display: flex;
     justify-content: center;
     flex-direction: row;
