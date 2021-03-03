@@ -44,8 +44,8 @@ const AddComments = ({ id, token, fetchBeers, isLoggedIn }) => {
   //AddComments.css
   if (isLoggedIn) {
     return (
-      <div className="Input_box">
-        <form className="Input_form" onSubmit={handleSubmit}>
+      <div className="Input__box">
+        <form className="Input__box--form" onSubmit={handleSubmit}>
           <div>
             <h3>Oceń i skomentuj</h3>
             {[...Array(5)].map((star, i) => {
@@ -61,7 +61,7 @@ const AddComments = ({ id, token, fetchBeers, isLoggedIn }) => {
                   />
                   <FaStar
                     size={20}
-                    color={starValue <= rate ? "red" : "grey"}
+                    color={starValue <= rate ? "red" : "lightgrey"}
                   />
                 </label>
               );
@@ -69,6 +69,7 @@ const AddComments = ({ id, token, fetchBeers, isLoggedIn }) => {
             <p className="Rating_number">{rate}/5</p>
           </div>
           <input
+            className="Rating__text"
             type="text"
             required
             value={comment}
@@ -76,7 +77,7 @@ const AddComments = ({ id, token, fetchBeers, isLoggedIn }) => {
           ></input>
           <input
             id="name"
-            className="Input_submit"
+            className="Input__submit"
             type="submit"
             value="Dodaj"
           ></input>
