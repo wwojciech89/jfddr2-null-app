@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  width: 100%;
+}
+
+/* .Button {
+  margin: 4px 10px 5px 2px;
+  font-size: 15px;
+  height: 40px;
+  width: 170px;
+  color: white;
+  background-color: #1d412c;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.Button:hover {
+  cursor: pointer;
+  background-color: #153121;
+  transform: scale(1.1);
+} */
+.btn {
+  margin: 0;
+  font-size: 15px;
+  height: 40px;
+  width: 140px;
+  color: white;
+  background-color: #1d412c;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  background-color: #153121;
+}
+
+.btnWide {
+  width: 300px;
+  height: 300px;
+}
+
+.blueText:hover {
+  color: rgb(0, 136, 255);
+}
+.blueText {
+  color: rgb(53, 103, 147);
+}
