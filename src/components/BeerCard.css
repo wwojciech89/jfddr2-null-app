@@ -5,6 +5,7 @@
   justify-content: center;
   background-color: white;
   flex-direction: column;
+  font-family: "Shippori Mincho", serif;
 }
 .Beercard {
   max-width: 1200px;
@@ -20,8 +21,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding-top: 10%;
   background-color: #5db354;
+  padding: 15px 0 15px 0;
 }
 .Beercard__left img {
   width: 30%;
@@ -83,7 +84,7 @@
   .Beercard__left {
     width: 40%;
     flex-direction: row-reverse;
-    padding-top: 5%;
+    padding: 0;
   }
   .Beercard__right {
     width: 60%;

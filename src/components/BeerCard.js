@@ -37,8 +37,7 @@ function BeerCard({ beers, token, fetchBeers, isLoggedIn }) {
               </div>
               <div className="Beercard__right--info">
                 <p className="Beercard__right--description">
-                  <strong>Informacje:</strong>
-                  {beer.description}
+                  <strong>Informacje:</strong> {beer.description}
                 </p>
                 <table className="Beercard__right--table">
                   <tbody>
@@ -69,8 +68,7 @@ function BeerCard({ beers, token, fetchBeers, isLoggedIn }) {
                   </tbody>
                 </table>
                 <p className="Beercard__right--description">
-                  <strong>Składniki:</strong>
-                  {beer.ingredients}
+                  <strong>Składniki:</strong> {beer.ingredients}
                 </p>
               </div>
             </div>
