@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/infoshareacademy.github.io/jfddr2-null-app/static/css/main.2e7919c8.chunk.css",
+    "main.js": "/infoshareacademy.github.io/jfddr2-null-app/static/js/main.d3d685ae.chunk.js",
+    "main.js.map": "/infoshareacademy.github.io/jfddr2-null-app/static/js/main.d3d685ae.chunk.js.map",
+    "runtime-main.js": "/infoshareacademy.github.io/jfddr2-null-app/static/js/runtime-main.2d35881c.js",
+    "runtime-main.js.map": "/infoshareacademy.github.io/jfddr2-null-app/static/js/runtime-main.2d35881c.js.map",
+    "static/js/2.fd157523.chunk.js": "/infoshareacademy.github.io/jfddr2-null-app/static/js/2.fd157523.chunk.js",
+    "static/js/2.fd157523.chunk.js.map": "/infoshareacademy.github.io/jfddr2-null-app/static/js/2.fd157523.chunk.js.map",
+    "index.html": "/infoshareacademy.github.io/jfddr2-null-app/index.html",
+    "static/css/main.2e7919c8.chunk.css.map": "/infoshareacademy.github.io/jfddr2-null-app/static/css/main.2e7919c8.chunk.css.map",
+    "static/js/2.fd157523.chunk.js.LICENSE.txt": "/infoshareacademy.github.io/jfddr2-null-app/static/js/2.fd157523.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2d35881c.js",
+    "static/js/2.fd157523.chunk.js",
+    "static/css/main.2e7919c8.chunk.css",
+    "static/js/main.d3d685ae.chunk.js"
+  ]
+}
