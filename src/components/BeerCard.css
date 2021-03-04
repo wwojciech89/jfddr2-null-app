@@ -3,7 +3,7 @@
   height: auto;
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(221, 221, 221));
   flex-direction: column;
   font-family: "Shippori Mincho", serif;
 }
@@ -24,7 +24,7 @@
   border: none;
 
   padding: 15px 0 15px 0;
-  background-color: rgb(230, 230, 230);
+
   color: black;
 }
 .Beercard__left img {
@@ -39,7 +39,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+
+  border-radius: 20px;
+  padding: 3%;
   border: none;
   color: black;
 }
@@ -71,7 +73,6 @@
   padding-top: 3%;
   color: black;
   border: none;
-  background-color: rgb(230, 230, 230);
 }
 @media screen and (min-width: 1024px) {
   .Beercard__right--description {
@@ -94,7 +95,8 @@
   }
   .Beercard__right {
     width: 60%;
-    background-color: rgb(230, 230, 230);
+
+    margin: 3%;
   }
   .Beercard__left img {
     width: 130px;
@@ -107,6 +109,5 @@
     padding: 10px;
     margin: 2%;
     padding-top: 3%;
-    background-color: white;
   }
 }
