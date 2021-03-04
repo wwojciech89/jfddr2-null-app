@@ -35,6 +35,9 @@
   font-size: 22px;
   font-family: "Abril Fatface", cursive;
 }
+.Beercard__left--rating p {
+  text-align: center;
+}
 .Beercard__right {
   display: flex;
   flex-direction: column;
@@ -111,7 +114,7 @@
   }
   .Beercard__comments {
     display: flex;
-    justify-content: space-around;
+
     flex-direction: row;
     padding: 10px;
     margin: 3%;

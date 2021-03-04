@@ -55,9 +55,9 @@ const AddComments = ({ id, token, fetchBeers, isLoggedIn }) => {
                   <input
                     type="radio"
                     name="rating"
+                    required
                     value={starValue}
                     onClick={(e) => setRate(starValue)}
-                    required
                   />
                   <FaStar
                     size={20}
@@ -68,13 +68,13 @@ const AddComments = ({ id, token, fetchBeers, isLoggedIn }) => {
             })}
             <p className="Rating_number">{rate}/5</p>
           </div>
-          <input
+          <textarea
             className="Rating__text"
             type="text"
             required
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-          ></input>
+          ></textarea>
           <input
             id="name"
             className="Input__submit"
