@@ -20,8 +20,7 @@
   color: #153121;
 }
 .header__logo:hover {
-  color: white;
-  text-shadow: 4px 4px 8px #000000;
+  transform: scale(1.1);
 }
 
 .header__button {
