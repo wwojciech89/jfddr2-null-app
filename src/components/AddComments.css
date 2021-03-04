@@ -1,7 +1,11 @@
 .Input__box {
   display: flex;
   justify-content: center;
-  width: 40%;
+  width: 90%;
+  box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
+  margin: 2%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
 }
 .Input__box--form {
   display: flex;
@@ -15,16 +19,27 @@
   opacity: 0;
 }
 
-.Rating__number {
+.Rating_number {
   text-align: center;
   font-size: 22px;
 }
-.Rating__text {
-  height: 50px;
-  width: 350px;
+.Input__submit {
+  width: 100px;
+  margin: 5px;
 }
+.Input__submit:hover {
+  transform: colo;
+}
+
 @media screen and (min-width: 768px) {
   .Input__box--form h3 {
     font-size: 24px;
+  }
+  .Rating__text {
+    height: 50px;
+    width: 350px;
+  }
+  .Input__box {
+    width: 90%;
   }
 }

@@ -26,7 +26,7 @@ const BeerCardComments = ({ beers, id }) => {
   }
 
   return (
-    <div className="Comments-box">
+    <div className="Comments__box">
       <ul>
         <h3>Komentarze</h3>
         {renderComments()}

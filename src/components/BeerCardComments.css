@@ -1,18 +1,23 @@
 .Comments__box {
-  width: 60%;
-  text-align: center;
+  width: 70%;
+  color: black;
 }
 .Comments__box h3 {
   font-size: 24px;
   font-family: "Abril Fatface", cursive;
+  text-align: center;
 }
 .comments__container {
 }
 .Comments__box li {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 5px;
   list-style: none;
-  background-color: grey;
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+
+  margin: 10px;
+  width: 95%;
 }
