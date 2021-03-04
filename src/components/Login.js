@@ -48,7 +48,6 @@ const Login = () => {
   return (
     <div style={{ margin: "40px" }}>
       <HomeButton />
-
       <form
         className="form"
         onSubmit={(e) => {
@@ -76,7 +75,7 @@ const Login = () => {
         </label>
 
         <input
-          className="login__submit formInput "
+          className="login__submitFormInput "
           type="submit"
           value="Zaloguj mnie"
         ></input>
