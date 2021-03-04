@@ -14,11 +14,14 @@
   letter-spacing: 10px;
   font-size: 20px;
   height: 110px;
-  font-family: "Reggae One", cursive;
+  font-family: "Notable", sans-serif;
 }
-
 .header__logo {
-  color: #153121;
+  color: #000000;
+}
+.header__logo:hover {
+  color: white;
+  text-shadow: 4px 4px 8px #000000;
 }
 
 .header__button {
