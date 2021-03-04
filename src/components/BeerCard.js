@@ -1,7 +1,7 @@
 import React from "react";
 import "./BeerCard.css";
 import "firebase/firestore";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import BeerCardComments from "./BeerCardComments";
 import "./BeerCardComments.css";
 import AddComments from "./AddComment";
@@ -71,16 +71,16 @@ function BeerCard({ beers, token, fetchBeers, isLoggedIn }) {
                   <strong>Składniki:</strong> {beer.ingredients}
                 </p>
               </div>
+              <AddComments
+                id={id}
+                token={token}
+                fetchBeers={fetchBeers}
+                isLoggedIn={isLoggedIn}
+              />
             </div>
           </div>
           <div className="Beercard__comments">
-            <AddComments
-              id={id}
-              token={token}
-              fetchBeers={fetchBeers}
-              isLoggedIn={isLoggedIn}
-            />
-            <BeerCardComments id={id} beers={beers} />
+            <BeerCardComments beer={beer} />
           </div>
         </div>
       </div>
