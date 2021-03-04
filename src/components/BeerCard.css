@@ -44,6 +44,7 @@
   justify-content: center;
   align-items: center;
   border: none;
+  border-radius: 5px;
   margin: 3% 3% 0 3%;
   box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
   color: black;
@@ -80,6 +81,7 @@
   border: none;
   box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
   background-color: rgb(255, 255, 255);
+  border-radius: 5px;
 }
 @media screen and (min-width: 1024px) {
   .Beercard__right--description {

@@ -27,9 +27,6 @@
   width: 100px;
   margin: 5px;
 }
-.Input__submit:hover {
-  transform: colo;
-}
 
 @media screen and (min-width: 768px) {
   .Input__box--form h3 {
@@ -37,9 +34,10 @@
   }
   .Rating__text {
     height: 50px;
-    width: 350px;
+    width: 300px;
+    padding: 4px;
   }
   .Input__box {
-    width: 90%;
+    width: 30%;
   }
 }

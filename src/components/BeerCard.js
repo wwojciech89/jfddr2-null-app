@@ -71,15 +71,15 @@ function BeerCard({ beers, token, fetchBeers, isLoggedIn }) {
                   <strong>Składniki:</strong> {beer.ingredients}
                 </p>
               </div>
-              <AddComments
-                id={id}
-                token={token}
-                fetchBeers={fetchBeers}
-                isLoggedIn={isLoggedIn}
-              />
             </div>
           </div>
           <div className="Beercard__comments">
+            <AddComments
+              id={id}
+              token={token}
+              fetchBeers={fetchBeers}
+              isLoggedIn={isLoggedIn}
+            />
             <BeerCardComments id={id} beers={beers} />
           </div>
         </div>
