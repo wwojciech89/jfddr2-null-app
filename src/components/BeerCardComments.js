@@ -12,8 +12,6 @@ const BeerCardComments = ({ beers, id }) => {
       return filterdCommentary.push(el);
     });
     const mapped = filterdCommentary.map((el, key) => {
-      console.log(`el ${key}`);
-      console.log(`filtredBeers ${filteredBeers[0].rating}`);
       return (
         <li key={key}>
           <div className="commentary__container">
