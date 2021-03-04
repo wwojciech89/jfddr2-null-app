@@ -1,11 +1,14 @@
 .Comments__box {
   width: 100%;
   color: black;
+  padding-bottom: 20px;
 }
 .Comments__box h3 {
   font-size: 24px;
   font-family: "Abril Fatface", cursive;
   text-align: center;
+  color: #153121;
+  letter-spacing: 5px;
 }
 .Comments__box li {
   display: flex;
@@ -66,5 +69,10 @@
     font-weight: 700;
     margin-top: 5px;
     margin-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  .Comments__box h3 {
+    font-size: 30px;
   }
 }

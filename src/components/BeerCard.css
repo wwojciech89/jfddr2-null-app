@@ -28,7 +28,7 @@
   color: black;
 }
 .Beercard__left img {
-  width: 30%;
+  width: 120px;
   height: auto;
 }
 .Beercard__left--rating {
@@ -100,21 +100,26 @@
   .Beercard__left {
     width: 40%;
     flex-direction: row-reverse;
+    justify-content: center;
     padding: 0;
   }
   .Beercard__right {
     width: 60%;
-    margin: 3% 3% 0 3%;
+    margin: 2% 3% 0 3%;
+  }
+  .Beercard__right--info {
+    padding: 1% 5% 1% 5%;
   }
   .Beercard__left img {
-    width: 120px;
+    width: 150px;
     height: auto;
   }
+
   .Beercard__comments {
     display: flex;
     flex-direction: row;
     padding: 10px;
-    margin: 3%;
+    margin: 2% 3% 3% 3%;
   }
   .Beercard__left--rating {
     font-size: 30px;
