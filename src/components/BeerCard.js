@@ -81,7 +81,7 @@ function BeerCard({ beers, token, fetchBeers, isLoggedIn }) {
               isLoggedIn={isLoggedIn}
             />
           </div>
-          <BeerCardComments id={id} beers={beers} />
+          <BeerCardComments beer={beer} />
         </div>
       </div>
     </>
