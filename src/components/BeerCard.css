@@ -33,25 +33,29 @@
 }
 .Beercard__left--rating {
   font-size: 22px;
+  font-family: "Abril Fatface", cursive;
 }
 .Beercard__right {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  border-radius: 20px;
-  padding: 3%;
   border: none;
+
+  padding: 3%;
+  box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
   color: black;
+  box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
 }
 .Beercard__right--name {
-  font-family: "Reggae One", cursive;
+  font-family: "Abril Fatface", cursive;
   font-size: 22px;
   color: #153121;
 }
 .Beercard__right--info {
   padding: 5%;
+  font-family: "Antic Slab", serif;
 }
 .Beercard__right--description {
   font-size: 18px;
@@ -70,13 +74,16 @@
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  padding-top: 3%;
+
   color: black;
   border: none;
+
+  box-shadow: 0px 5px 7px 1px rgba(0, 0, 0, 0.3);
+  background-color: rgb(255, 255, 255);
 }
 @media screen and (min-width: 1024px) {
   .Beercard__right--description {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -96,10 +103,10 @@
   .Beercard__right {
     width: 60%;
 
-    margin: 3%;
+    margin: 3% 3% 0 3%;
   }
   .Beercard__left img {
-    width: 130px;
+    width: 170px;
     height: auto;
   }
   .Beercard__comments {
@@ -107,7 +114,10 @@
     justify-content: space-around;
     flex-direction: row;
     padding: 10px;
-    margin: 2%;
+    margin: 3%;
     padding-top: 3%;
+  }
+  .Beercard__left--rating {
+    font-size: 30px;
   }
 }

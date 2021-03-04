@@ -14,10 +14,10 @@
   letter-spacing: 10px;
   font-size: 20px;
   height: 110px;
-  font-family: "Notable", sans-serif;
+  font-family: "Abril Fatface", cursive;
 }
 .header__logo {
-  color: #000000;
+  color: #153121;
 }
 .header__logo:hover {
   color: white;
