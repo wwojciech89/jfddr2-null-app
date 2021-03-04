@@ -1,6 +1,6 @@
 import React from "react";
 // import { useState } from "react";
-
+import { FaStar } from "react-icons/fa";
 const Rating = ({ beers, id }) => {
   let filteredBeers;
 
@@ -16,6 +16,17 @@ const Rating = ({ beers, id }) => {
 
   return (
     <div className="Rating_stars">
+      <div>
+        {[1, 2, 3, 4, 5].map((score) => (
+          <FaStar
+            key={score}
+            name="star"
+            color={Math.round(rate) >= score ? "red" : "grey"}
+            type="solid"
+            size={20}
+          />
+        ))}
+      </div>
       <p className="Rating_number">
         {Math.round(isNaN(rate) ? 0 : Math.round(rate))}/5
       </p>
