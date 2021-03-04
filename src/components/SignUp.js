@@ -75,7 +75,7 @@ const SignUp = () => {
         </label>
 
         <input
-          className="login__submit formInput"
+          className="login__submitFormInput"
           type="submit"
           value="Zarejestruj mnie"
         ></input>
