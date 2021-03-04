@@ -87,6 +87,9 @@
   .Beercard__right--description {
     font-size: 18px;
   }
+  .Beercard__container {
+    justify-content: flex-start;
+  }
 }
 @media screen and (min-width: 768px) {
   .Beercard__container {
