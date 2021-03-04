@@ -1,7 +1,7 @@
 import React from "react";
 import "./BeerCard.css";
 import "firebase/firestore";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import BeerCardComments from "./BeerCardComments";
 import "./BeerCardComments.css";
 import AddComments from "./AddComment";
@@ -80,7 +80,7 @@ function BeerCard({ beers, token, fetchBeers, isLoggedIn }) {
             </div>
           </div>
           <div className="Beercard__comments">
-            <BeerCardComments id={id} beers={beers} />
+            <BeerCardComments beer={beer} />
           </div>
         </div>
       </div>

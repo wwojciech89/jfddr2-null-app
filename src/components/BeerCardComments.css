@@ -7,8 +7,6 @@
   font-family: "Abril Fatface", cursive;
   text-align: center;
 }
-.comments__container {
-}
 .Comments__box li {
   display: flex;
   flex-direction: row;
@@ -17,7 +15,57 @@
   list-style: none;
   background-color: rgb(236, 236, 236);
   border-radius: 5px;
-
   margin: 10px;
   width: 95%;
+}
+
+.comments__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.commentary__login {
+  font-weight: 700;
+  width: 100px;
+  margin-top: auto;
+}
+
+.commentary__text {
+  align-self: left;
+  font-weight: 700;
+}
+.commentary__rating {
+  margin-right: 50px;
+  font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .commentary__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    text-align: center;
+  }
+  .commentary__login {
+    font-weight: 700;
+    margin-top: 5px;
+    text-decoration: underline;
+    width: 100%;
+  }
+
+  .commentary__text {
+    width: 100%;
+    align-self: left;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+  .commentary__rating {
+    width: 100%;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-right: 0;
+  }
 }
