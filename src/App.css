@@ -53,4 +53,6 @@
 }
 .blueText {
   color: rgb(53, 103, 147);
+  text-align: center;
+  margin: 5px;
 }

@@ -1,5 +1,5 @@
 .Comments__box {
-  width: 70%;
+  width: 100%;
   color: black;
 }
 .Comments__box h3 {
@@ -16,7 +16,6 @@
   background-color: rgb(236, 236, 236);
   border-radius: 5px;
   margin: 10px;
-  width: 95%;
 }
 
 .comments__container {
