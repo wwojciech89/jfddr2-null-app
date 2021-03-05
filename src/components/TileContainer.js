@@ -6,7 +6,7 @@ import "./tileContainer.css";
 const TileContainer = ({ beers, search }) => {
   return (
     <main>
-      <p className="TileContainer__p">Odkryj dobre piwo</p>
+      <p className="TileContainer__p">Odkryj dobre piwo </p>
       <div className="TileContainer__div">
         {beers &&
           beers

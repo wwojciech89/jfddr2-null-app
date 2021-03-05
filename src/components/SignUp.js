@@ -7,14 +7,6 @@ import HomeButton from "./HomeButton";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userEmail, setUserEmail] = useState("");
-  const [userPassword, setUserPassword] = useState("");
-
-  const addNewUserToDB = () => {
-    firebase.firestore().collection("Users").add({
-      email: "tu będzie email",
-    });
-  };
 
   const createNewUser = () => {
     firebase
@@ -26,20 +18,6 @@ const SignUp = () => {
         });
       });
   };
-
-  // const signIn = (event) => {
-  //   firebase
-  //     .auth()
-  //     .signInWithEmailAndPassword(userEmail, userPassword)
-  //     .then((token) => {
-  //       console.log(
-  //         "UID usera to " +
-  //           token.user.uid +
-  //           " Email usera to " +
-  //           token.user.email
-  //       );
-  //     });
-  // };
 
   const logout = () => {
     firebase.auth().signOut();
@@ -67,6 +45,7 @@ const SignUp = () => {
         <label>
           password:
           <input
+            type="password"
             className="formInput"
             onChange={(e) => {
               setPassword(e.target.value);
@@ -75,7 +54,7 @@ const SignUp = () => {
         </label>
 
         <input
-          className="login__submit formInput"
+          className="login__submitFormInput"
           type="submit"
           value="Zarejestruj mnie"
         ></input>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./BeerCard.css";
 import "firebase/firestore";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import BeerCardComments from "./BeerCardComments";
 import "./BeerCardComments.css";
 import AddComments from "./AddComment";
@@ -20,68 +20,68 @@ function BeerCard({ beers, token, fetchBeers, isLoggedIn }) {
 
   return (
     <>
-      <div className="BeerCard-container">
+      <div className="Beercard__container">
         <HomeButton />
-        <div className="BeerCard">
-          <div className="left">
-            <div className="BeerCard-box">
-              <div className="BeerCard-rating">
+        <div className="Beercard">
+          <div className="Beercard__upper">
+            <div className="Beercard__left">
+              <div className="Beercard__left--rating">
                 <Rating id={id} beers={beers} />
               </div>
               <img src={beer.picture} alt="Girl in a jacket" height="400px" />
             </div>
-          </div>
-          <div className="right">
-            <div className="product_name">
-              <h1>{beer.name}</h1>
-              <h2>{beer.brewery}</h2>
+            <div className="Beercard__right">
+              <div className="Beercard__right--name">
+                <h1>{beer.name}</h1>
+                <h2>{beer.brewery}</h2>
+              </div>
+              <div className="Beercard__right--info">
+                <p className="Beercard__right--description">
+                  <strong>Informacje:</strong> {beer.description}
+                </p>
+                <table className="Beercard__right--table">
+                  <tbody>
+                    <tr>
+                      <td>Rodzaj:</td>
+                      <td>{beer.type}</td>
+                    </tr>
+                    <tr>
+                      <td>Alkohol%:</td>
+                      <td>{beer.alcohol}</td>
+                    </tr>
+                    <tr>
+                      <td>Pochodzenie:</td>
+                      <td>{beer.origin}</td>
+                    </tr>
+                    <tr>
+                      <td>Ekstrakt:</td>
+                      <td>{beer.extract}</td>
+                    </tr>
+                    <tr>
+                      <td>Pojemność:</td>
+                      <td>{beer.volume}</td>
+                    </tr>
+                    <tr>
+                      <td>Gorycz:</td>
+                      <td>{beer.bitterness}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p className="Beercard__right--description">
+                  <strong>Składniki:</strong> {beer.ingredients}
+                </p>
+              </div>
+              <AddComments
+                id={id}
+                token={token}
+                fetchBeers={fetchBeers}
+                isLoggedIn={isLoggedIn}
+              />
             </div>
-            <div className="product_info">
-              <p className="BeerCard_description">
-                <strong>Informacje:</strong>
-                {beer.description}
-              </p>
-              <table>
-                <tbody>
-                  <tr>
-                    <td>Rodzaj:</td>
-                    <td>{beer.type}</td>
-                  </tr>
-                  <tr>
-                    <td>Alkohol%:</td>
-                    <td>{beer.alcohol}</td>
-                  </tr>
-                  <tr>
-                    <td>Pochodzenie:</td>
-                    <td>{beer.origin}</td>
-                  </tr>
-                  <tr>
-                    <td>Ekstrakt:</td>
-                    <td>{beer.extract}</td>
-                  </tr>
-                  <tr>
-                    <td>Pojemność:</td>
-                    <td>{beer.volume}</td>
-                  </tr>
-                  <tr>
-                    <td>Gorycz:</td>
-                    <td>{beer.bitterness}</td>
-                  </tr>
-                </tbody>
-              </table>
-              <p className="BeerCard_description">
-                <strong>Składniki:</strong>
-                {beer.ingredients}
-              </p>
-            </div>
-            <AddComments
-              id={id}
-              token={token}
-              fetchBeers={fetchBeers}
-              isLoggedIn={isLoggedIn}
-            />
           </div>
-          <BeerCardComments id={id} beers={beers} />
+          <div className="Beercard__comments">
+            <BeerCardComments beer={beer} />
+          </div>
         </div>
       </div>
     </>

@@ -1,43 +1,20 @@
 import firebase from "../Firebase/firebase.js";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./login.css";
 import HomeButton from "./HomeButton";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
-
-  const addNewUserToDB = () => {
-    firebase.firestore().collection("Users").add({
-      email: "tu będzie email",
-    });
-  };
-
-  const createNewUser = () => {
-    firebase
-      .auth()
-      .createUserWithEmailAndPassword(email, password)
-      .then((token) => {
-        firebase.firestore().collection("Users").doc(token.user.uid).set({
-          email: token.user.email,
-        });
-      });
-  };
+  let history = useHistory();
 
   const signIn = (event) => {
     firebase
       .auth()
       .signInWithEmailAndPassword(userEmail, userPassword)
       .then((token) => {
-        console.log(
-          "UID usera to " +
-            token.user.uid +
-            " Email usera to " +
-            token.user.email
-        );
+        history.go(-1);
       });
   };
 
@@ -48,7 +25,6 @@ const Login = () => {
   return (
     <div style={{ margin: "40px" }}>
       <HomeButton />
-
       <form
         className="form"
         onSubmit={(e) => {
@@ -68,6 +44,7 @@ const Login = () => {
         <label>
           password:
           <input
+            type="password"
             className="formInput"
             onChange={(e) => {
               setUserPassword(e.target.value);
@@ -76,7 +53,7 @@ const Login = () => {
         </label>
 
         <input
-          className="login__submit formInput "
+          className="login__submitFormInput "
           type="submit"
           value="Zaloguj mnie"
         ></input>
