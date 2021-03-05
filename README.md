@@ -30,5 +30,3 @@ The app allows you to:
 
 We're glad you made it this far, let us know what you think of the app!
 Have a great day! :)
-
-Translated with www.DeepL.com/Translator (free version)
