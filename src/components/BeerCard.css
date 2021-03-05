@@ -1,15 +1,21 @@
 .Beercard__container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   background-image: linear-gradient(rgb(255, 255, 255), rgb(212, 212, 212));
   font-family: "Shippori Mincho", serif;
-  height: 100vh;
 }
 .Beercard {
   max-width: 1200px;
 }
+
+@media screen and (min-width: 1500px) {
+  .Beercard {
+    margin-top: 5%;
+  }
+}
+
 .Beercard__upper {
   width: 100%;
   height: auto;
@@ -88,6 +94,7 @@
   }
   .Beercard__container {
     justify-content: flex-start;
+    height: 100vh;
   }
 }
 @media screen and (min-width: 768px) {
