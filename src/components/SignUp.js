@@ -1,12 +1,13 @@
 import firebase from "../Firebase/firebase.js";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./login.css";
 import HomeButton from "./HomeButton";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  let history = useHistory();
 
   const createNewUser = () => {
     firebase
@@ -16,6 +17,7 @@ const SignUp = () => {
         firebase.firestore().collection("Users").doc(token.user.uid).set({
           email: token.user.email,
         });
+        history.go(-2);
       });
   };
 

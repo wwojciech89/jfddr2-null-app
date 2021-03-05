@@ -12,7 +12,10 @@
   background-color: white;
   box-shadow: 5px 5px 5px 5px rgba(223, 226, 218, 0.4);
   padding: 20px;
-  margin-bottom: 25px;
+}
+.loginWrapper {
+  display: flex;
+  height: calc(100vh - 110px);
 }
 
 .signForm__button2 {
@@ -30,6 +33,12 @@
 @media only screen and (min-width: 768px) {
   .form {
     margin: auto;
+    min-width: 500px;
+    margin-top: 12%;
+  }
+  .loginWrapper {
+    display: flex;
+    height: calc(100vh - 90px);
   }
 }
 
