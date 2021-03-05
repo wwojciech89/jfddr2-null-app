@@ -15,7 +15,12 @@ const Login = () => {
       .signInWithEmailAndPassword(userEmail, userPassword)
       .then((token) => {
         history.go(-1);
-      });
+      })
+      .catch((err) =>
+        err.code === "auth/wrong-password"
+          ? alert("Podałeś złe dane logowania")
+          : null
+      );
   };
 
   const logout = () => {
