@@ -10,7 +10,7 @@
 
 .TileContainer__div {
   margin: auto;
-  /* max-width: 1400px; */
+  max-width: 1400px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
