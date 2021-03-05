@@ -1,53 +1,77 @@
-.Comments-box {
-  display: flex;
-  justify-content: center;
+.Comments__box {
   width: 100%;
-  height: auto;
-}
-.Comments-box ul {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  max-width: 1200px;
-  border: 1px solid #153121;
-  box-shadow: 5px 5px 5px 5px rgba(223, 226, 218, 0.4);
-  border-radius: 10px;
-  min-width: 300px;
-  margin: 5% 0 5% 0;
-  padding: 5px;
-  width: 90%;
-  background-color: white;
-  color: #153121;
-}
-.Comments-box li {
-  font-size: 12px;
-  width: 90%;
-  border: 1px solid white;
-  list-style: none;
-  border-radius: 10px;
-  margin: 5px 0 5px 0;
-  min-height: 30px;
-  background-color: #ebebeb;
   color: black;
-  padding: 5px;
+  padding-bottom: 20px;
 }
-.Comments-box ul h3 {
+.Comments__box h3 {
+  font-size: 24px;
+  font-family: "Abril Fatface", cursive;
+  text-align: center;
   color: #153121;
+  letter-spacing: 5px;
+}
+.Comments__box li {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  list-style: none;
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+  margin: 10px;
 }
 
 .commentary__container {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  margin-left: 20px;
+  justify-content: space-between;
+  font-size: 13px;
 }
-
 .commentary__login {
   font-weight: 700;
-  width: 200px;
+  width: 100px;
+  margin-top: auto;
 }
 
 .commentary__text {
-  margin-left: 50px;
+  align-self: left;
+  font-weight: 700;
+}
+.commentary__rating {
+  margin-right: 50px;
+  font-weight: 700;
+}
+@media (max-width: 1024px) {
+  .commentary__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 17px;
+    text-align: center;
+  }
+  .commentary__login {
+    font-weight: 700;
+    margin-top: 5px;
+    text-decoration: underline;
+    width: 100%;
+  }
+
+  .commentary__text {
+    width: 100%;
+    align-self: left;
+    font-weight: 700;
+    margin-top: 5px;
+  }
+  .commentary__rating {
+    width: 100%;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-right: 0;
+  }
+}
+@media (min-width: 768px) {
+  .Comments__box h3 {
+    font-size: 30px;
+  }
 }
