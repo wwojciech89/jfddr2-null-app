@@ -19,9 +19,7 @@ const Avatar = ({ isLoggedIn }) => {
   }
   return (
     <Link to={`/login`}>
-      <button className="header__button">
-        ZALOGUJ SIĘ ABY DODAWAĆ KOMENTARZE
-      </button>
+      <button className="header__button">ZALOGUJ SIĘ</button>
     </Link>
   );
 };

@@ -26,7 +26,7 @@
 
 .header__button {
   font-size: 12px;
-  width: 270px;
+  width: 228px;
   height: 25px;
   margin: 0;
 
@@ -52,7 +52,7 @@
   }
   .header__button {
     font-size: 12px;
-    height: 50px;
+    height: 35px;
     width: 140px;
   }
 } ;
