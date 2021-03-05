@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
   background-image: linear-gradient(rgb(255, 255, 255), rgb(221, 221, 221));
-  flex-direction: column;
   font-family: "Shippori Mincho", serif;
+  height: 100vh;
 }
 .Beercard {
   max-width: 1200px;
@@ -86,6 +86,9 @@
 @media screen and (min-width: 1024px) {
   .Beercard__right--description {
     font-size: 18px;
+  }
+  .Beercard__container {
+    justify-content: flex-start;
   }
 }
 @media screen and (min-width: 768px) {
