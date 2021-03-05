@@ -19,7 +19,7 @@ const Login = () => {
       .catch((err) =>
         err.code === "auth/wrong-password"
           ? alert("Podałeś złe dane logowania")
-          : null
+          : alert("Podałeś złe dane logowania")
       );
   };
 
