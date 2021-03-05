@@ -26,7 +26,7 @@ const SignUp = () => {
   };
 
   return (
-    <div style={{ margin: "40px" }}>
+    <div className="loginWrapper">
       <HomeButton />
       <form
         className="form"
