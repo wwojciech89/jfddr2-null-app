@@ -1,16 +1,16 @@
 ## Design for InfoShare Academy - An app for a community of people who love beer
 
 
-Project made by: 
-https://github.com/jozef-wolf
-https://github.com/oliwia-coder
-https://github.com/Tomaszart
-https://github.com/wwojciech89
-
-
 Technologies used to create the App: HTML, CSS, JavaScript, React.
 We used Firebase platform.
 Activities were conducted in Scrum methodology, RWD.
+
+
+Project made in cooperation with: 
+https://github.com/jozef-wolf
+https://github.com/oliwia-coder
+https://github.com/Tomaszart
+
 
 
 ### About the application itself:
@@ -26,6 +26,9 @@ The app allows you to:
 - log in
 - logging in allows you to rate your favorite beers and
   share your opinion with others!
+  
+  
+You can see the aplication here: https://infoshareacademy.github.io/jfddr2-null-app/#/
 
 
 We're glad you made it this far, let us know what you think of the app!
